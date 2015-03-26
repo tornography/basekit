@@ -1,0 +1,15 @@
+
+.icon--facebook {
+  background-image: url(svg.png);
+  background-position: 0px 0px;
+  width: 44px;
+  height: 44px;
+}
+
+.icon--twitter {
+  background-image: url(svg.png);
+  background-position: -44px 0px;
+  width: 44px;
+  height: 44px;
+}
+

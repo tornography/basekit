@@ -7,11 +7,17 @@
     "gulp": "^3.8.11"
   },
   "devDependencies": {
+    "cheerio": "^0.19.0",
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^2.1.0",
+    "gulp-cheerio": "^0.6.2",
+    "gulp-concat": "^2.5.2",
     "gulp-minify-css": "^1.0.0",
     "gulp-rename": "^1.2.0",
     "gulp-sass": "^1.3.3",
+    "gulp-svgfallback": "^3.0.1",
+    "gulp-svgmin": "^1.1.1",
+    "gulp-svgstore": "^5.0.0",
     "gulp-uglify": "^1.1.0"
   },
   "scripts": {
