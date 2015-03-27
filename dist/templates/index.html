@@ -14,7 +14,28 @@
 <main class="main-content">
     <h1>HTML Ipsum Presents</h1>
 
-    <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+    <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>(em) Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit <small>(small) amet est et</small> sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>(code) commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros <sup>(sup) ipsum</sup> rutrum <sub>(sub) orci</sub>, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+
+    <div>
+        <p><a href="#!">This is a text link</a>.</p>
+        <p><strong>Strong is used to indicate strong importance.</strong></p>
+        <p><em>This text has added emphasis.</em></p>
+        <p>The <b>b element</b> is stylistically different text from normal text, without any special importance.</p>
+        <p>The <i>i element</i> is text that is offset from the normal text.</p>
+        <p>The <u>u element</u> is text with an unarticulated, though explicitly rendered, non-textual annotation.</p>
+        <p><del>This text is deleted</del> and <ins>This text is inserted</ins>.</p>
+        <p><s>This text has a strikethrough</s>.</p>
+        <p>Superscript<sup>®</sup>.</p>
+        <p>Subscript for things like H<sub>2</sub>O.</p>
+        <p><small>This small text is small for for fine print, etc.</small></p>
+        <p>Abbreviation: <abbr title="HyperText Markup Language">HTML</abbr></p>
+        <p><q cite="https://developer.mozilla.org/en-US/docs/HTML/Element/q">This text is a short inline quotation.</q></p>
+        <p><cite>This is a citation.</cite>
+        </p><p>The <dfn>dfn element</dfn> indicates a definition.</p>
+        <p>The <mark>mark element</mark> indicates a highlight.</p>
+        <p>The <var>variable element</var>, such as <var>x</var> = <var>y</var>.</p>
+        <p>The time element: <time datetime="2013-04-06T12:32+00:00">2 weeks ago</time></p>
+    </div>
 
     <h2>Header Level 2</h2>
 
@@ -23,19 +44,19 @@
        <li>Aliquam tincidunt mauris eu risus.</li>
     </ol>
 
-    <blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
+    <blockquote><p>(blockquote) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
 
     <h3>Header Level 3</h3>
 
-    <ul>
-       <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-       <li>Aliquam tincidunt mauris eu risus.</li>
+    <ul class="basic-list">
+       <li class="basic-list__item">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+       <li class="basic-list__item">Aliquam tincidunt mauris eu risus.</li>
     </ul>
 
-    <ol>
-       <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-       <li>Aliquam tincidunt mauris eu risus.</li>
-       <li>Vestibulum auctor dapibus neque.</li>
+    <ol class="basic-list">
+       <li class="basic-list__item">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+       <li class="basic-list__item">Aliquam tincidunt mauris eu risus.</li>
+       <li class="basic-list__item">Vestibulum auctor dapibus neque.</li>
     </ol>
 
     <h4>Icons</h4>
@@ -48,13 +69,11 @@
     <h5>Headline 5</h5>
     <h6>Headline 6</h6>
 
-<pre><code>
-#header h1 a { 
+<pre><code>#header h1 a { 
     display: block; 
     width: 300px; 
     height: 80px; 
-}
-</code></pre>
+}</code></pre>
 
     <dl>
        <dt>Definition list</dt>
@@ -67,7 +86,8 @@
     commodo consequat.</dd>
     </dl>
 
-    <table class="basic-table">
+    <table class="basic-table--border">
+        <caption>Table</caption>
         <thead>
             <tr>
                 <th>head</th>
@@ -107,45 +127,43 @@
     </table>
 
     <form action="#" method="post">
-        <div>
+        <div class="form-group">
              <label for="name" class="basic-label">Text Input:</label>
-             <input type="text" name="name" id="name" class="basic-input"/>
+             <input type="text" name="name" id="name" class="basic-input" placeholder="Basic Input"/>
         </div>
 
-        <div>
-            <h4>Radio Button Choice</h4>
+        <h4>Radio Button Choice</h4>
 
-            <div class="form-group">
-                <label class="checkradio__label">
-                    <input type="radio" name="radio-choice-1" value="choice-1" class="checkradio__input" />
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
-                </label>
-            </div>
-            
-            <div class="form-group">
-                <label class="checkradio__label">
-                    <input type="radio" name="radio-choice-1" value="choice-2" class="checkradio__input" />
-                    Choice 2
-                </label>
-            </div>
-
-            <div class="form-group">
-                <label class="checkradio__label">
-                    <input type="checkbox" name="check-choice-1" value="choice-1" class="checkradio__input" />
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
-                </label>
-            </div>
-            
-            <div class="form-group">
-                <label class="checkradio__label">
-                    <input type="checkbox" name="check-choice-2" value="choice-2" class="checkradio__input" />
-                    Choice 2
-                </label>
-            </div>
-            
+        <div class="form-group">
+            <label class="checkradio__label">
+                <input type="radio" name="radio-choice-1" value="choice-1" class="checkradio__input" />
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+            </label>
+        </div>
+        
+        <div class="form-group">
+            <label class="checkradio__label">
+                <input type="radio" name="radio-choice-1" value="choice-2" class="checkradio__input" />
+                Choice 2
+            </label>
         </div>
 
-        <div>
+        <div class="form-group">
+            <label class="checkradio__label">
+                <input type="checkbox" name="check-choice-1" value="choice-1" class="checkradio__input" />
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+            </label>
+        </div>
+        
+        <div class="form-group">
+            <label class="checkradio__label">
+                <input type="checkbox" name="check-choice-2" value="choice-2" class="checkradio__input" />
+                Choice 2
+            </label>
+        </div>
+
+
+        <div class="form-group">
             <label for="select-choice" class="basic-label">Select Dropdown Choice:</label>
             <select name="select-choice" id="select-choice" class="basic-input">
                 <option value="Choice 1">Choice 1</option>
@@ -154,20 +172,18 @@
             </select>
         </div>
         
-        <div>
+        <div class="form-group h-push-bottom">
             <label for="textarea" class="basic-label">Textarea:</label>
-            <textarea name="textarea" id="textarea" class="basic-textarea"></textarea>
+            <textarea name="textarea" id="textarea" class="basic-textarea" placeholder="Textarea here"></textarea>
         </div>
-        
-        
 
-        <div>
-            <input type="submit" value="Submit" />
+        <div class="form-group">
+            <button type="button" class="button">Primary</button>
+            <button type="button" class="button--secondary">Secondary</button>
         </div>
     </form>
 
-    <button type="button" class="button">Primary</button>
-    <button type="button" class="button--secondary">Secondary</button>
+    
 </main>
 
 <footer class="main-footer">

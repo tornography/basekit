@@ -1,21 +1,16 @@
-html {
-    font-size: 16px;
-}
-
+$scale-query: "screen and (min-width: 30em)";
 $base-font-size: 1rem;
 $base-line-height: 1.25rem;
 $base-line-height2: 1.5rem;
 $scale: 1.25;
 $scale2: 1.5;
 
-$scale-query: "screen and (min-width: 30em)";
-
 // add a line-height, till font-size fits in
-@function get-lineheight($fontsize){
-    $lineheight: $base-line-height;
+@function get-lineheight($fontsize,$height: $base-line-height){
+    $lineheight: $height;
 
     @while $fontsize > $lineheight {
-        $lineheight: $lineheight + $base-line-height;
+        $lineheight: $lineheight + $height;
     }
 
     @return $lineheight;
@@ -41,20 +36,38 @@ $scale-query: "screen and (min-width: 30em)";
     @return $fontsize;
 }
 
+
+
+html {
+    font-size: 16px;
+}
+
+/* debug */
+body {
+    background-image: linear-gradient(transparent 19px, rgba(255,0,0,0.5) 19px);
+    background-size: 20px 20px;
+
+    @media #{$scale-query} {
+        background-image: linear-gradient(transparent 23px, rgba(255,0,0,0.5) 23px);
+        background-size: 24px 24px;
+    }
+}
+
+
 body {
     color: $primary-color;
 
     font-size: $base-font-size;
     line-height: $base-line-height;
 
-    @media screen and (min-width: 30em){
+    @media #{$scale-query} {
         line-height: $base-line-height2;
     }
 }
 
 h1 {
     font-size: font-scale(3,$scale);
-    line-height: get-lineheight(font-scale(3,$scale));
+    line-height: get-lineheight(font-scale(3,$scale),$base-line-height);
 
     margin-top: $base-line-height * 2;
     margin-bottom: $base-line-height * 1;
@@ -65,20 +78,20 @@ h1 {
 
     @media #{$scale-query} {
         font-size: font-scale(3,$scale2);
-        line-height: get-lineheight(font-scale(3,$scale2));
+        line-height: get-lineheight(font-scale(3,$scale2),$base-line-height2);
 
         margin-top: $base-line-height2 * 1;
         margin-bottom: $base-line-height2 * 1;
 
         &::before {
-            content: "(" + font-scale(3,$scale2) + ") ";
+            content: "(" + font-scale(3,$scale2) + "/" + get-lineheight(font-scale(3,$scale2),$base-line-height2) + ") ";
         }
     }
 }
 
 h2 {
     font-size: font-scale(2,$scale);
-    line-height: get-lineheight(font-scale(2,$scale));
+    line-height: get-lineheight(font-scale(2,$scale),$base-line-height);
 
     margin-top: $base-line-height * 2;
     margin-bottom: $base-line-height * 1;
@@ -89,7 +102,7 @@ h2 {
 
     @media #{$scale-query} {
         font-size: font-scale(2,$scale2);
-        line-height: get-lineheight(font-scale(2,$scale2));
+        line-height: get-lineheight(font-scale(2,$scale2),$base-line-height2);
 
         margin-top: $base-line-height2 * 1;
         margin-bottom: $base-line-height2 * 1;
@@ -102,7 +115,7 @@ h2 {
 
 h3 {
     font-size: font-scale(1,$scale);
-    line-height: get-lineheight(font-scale(1,$scale));
+    line-height: get-lineheight(font-scale(1,$scale),$base-line-height);
 
     margin-top: $base-line-height * 1;
     margin-bottom: $base-line-height * 1;
@@ -113,7 +126,7 @@ h3 {
 
     @media #{$scale-query} {
         font-size: font-scale(1,$scale2);
-        line-height: get-lineheight(font-scale(1,$scale2));
+        line-height: get-lineheight(font-scale(1,$scale2),$base-line-height2);
 
         margin-top: $base-line-height2 * 1;
         margin-bottom: $base-line-height2 * 1;
@@ -151,20 +164,69 @@ h4 {
 h5,
 h6 {
     //font-size: font-scale(-1);
-    line-height: get-lineheight(font-scale(-1,$scale));
-
+    line-height: get-lineheight(font-scale(-1,$scale),$base-line-height);
     margin-top: $base-line-height * 1;
     margin-bottom: $base-line-height * 1;
+
+    @media #{$scale-query} {
+        line-height: get-lineheight(font-scale(-1,$scale2),$base-line-height2);
+        margin-top: $base-line-height2 * 1;
+        margin-bottom: $base-line-height2 * 1;
+    }
 
     &::before {
         content: "(" + font-scale(-1,$scale) + ") ";
     }
 }
+small,
+code {
+    line-height: 1.1rem;
+    
+    //line-height: get-lineheight(font-scale(-1,$scale),$base-line-height - 0.05); //1.25rem - 0.05rem hack
 
-p {
+    @media #{$scale-query} {
+        line-height: 1.2rem;
+    //    line-height: get-lineheight(font-scale(-1,$scale2),$base-line-height2 - 0.2); //1.5rem - 0.2rem hack
+    }
+}
+pre code {
+    line-height: $base-line-height;
+
+    @media #{$scale-query} {
+        line-height: $base-line-height2;
+    }
+}
+small {
+    font-size: font-scale(-1,$scale);
+
+    @media #{$scale-query} {
+        font-size: font-scale(-1,$scale2);
+    }
+}
+
+p,
+ul,
+ol,
+pre,
+dl {
     font-size: $base-font-size;
     line-height: $base-line-height;
 
     margin-top: $base-line-height * 1;
     margin-bottom: $base-line-height * 1;
+
+    @media #{$scale-query} {
+        line-height: $base-line-height2;
+
+        margin-top: $base-line-height2 * 1;
+        margin-bottom: $base-line-height2 * 1;
+    }
+}
+
+blockquote {
+    margin: $base-line-height * 2;
+
+    @media #{$scale-query} {
+        margin: $base-line-height2 * 2;
+    }
 }

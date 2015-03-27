@@ -327,8 +327,20 @@ html {
 body {
   background-color: #FFF; }
 
+pre code {
+  display: block; }
+
 html {
   font-size: 16px; }
+
+/* debug */
+body {
+  background-image: linear-gradient(transparent 19px, rgba(255, 0, 0, 0.5) 19px);
+  background-size: 20px 20px; }
+  @media screen and (min-width: 30em) {
+    body {
+      background-image: linear-gradient(transparent 23px, rgba(255, 0, 0, 0.5) 23px);
+      background-size: 24px 24px; } }
 
 body {
   color: #666;
@@ -348,11 +360,11 @@ h1 {
   @media screen and (min-width: 30em) {
     h1 {
       font-size: 3.375rem;
-      line-height: 3.75rem;
+      line-height: 4.5rem;
       margin-top: 1.5rem;
       margin-bottom: 1.5rem; }
       h1::before {
-        content: "(3.375rem) "; } }
+        content: "(3.375rem/4.5rem) "; } }
 
 h2 {
   font-size: 1.5625rem;
@@ -364,7 +376,7 @@ h2 {
   @media screen and (min-width: 30em) {
     h2 {
       font-size: 2.25rem;
-      line-height: 2.5rem;
+      line-height: 3rem;
       margin-top: 1.5rem;
       margin-bottom: 1.5rem; }
       h2::before {
@@ -380,7 +392,7 @@ h3 {
   @media screen and (min-width: 30em) {
     h3 {
       font-size: 1.5rem;
-      line-height: 2.5rem;
+      line-height: 1.5rem;
       margin-top: 1.5rem;
       margin-bottom: 1.5rem; }
       h3::before {
@@ -406,50 +418,140 @@ h5, h6 {
   line-height: 1.25rem;
   margin-top: 1.25rem;
   margin-bottom: 1.25rem; }
+  @media screen and (min-width: 30em) {
+    h5, h6 {
+      line-height: 1.5rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem; } }
   h5::before, h6::before {
     content: "(0.8rem) "; }
 
-p {
+small, code {
+  line-height: 1.1rem; }
+  @media screen and (min-width: 30em) {
+    small, code {
+      line-height: 1.2rem; } }
+
+pre code {
+  line-height: 1.25rem; }
+  @media screen and (min-width: 30em) {
+    pre code {
+      line-height: 1.5rem; } }
+
+small {
+  font-size: 0.8rem; }
+  @media screen and (min-width: 30em) {
+    small {
+      font-size: 0.66667rem; } }
+
+p, ul, ol, pre, dl {
   font-size: 1rem;
   line-height: 1.25rem;
   margin-top: 1.25rem;
   margin-bottom: 1.25rem; }
+  @media screen and (min-width: 30em) {
+    p, ul, ol, pre, dl {
+      line-height: 1.5rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem; } }
+
+blockquote {
+  margin: 2.5rem; }
+  @media screen and (min-width: 30em) {
+    blockquote {
+      margin: 3rem; } }
 
 .basic-label {
-  display: block; }
+  display: block;
+  padding: 0.625rem 0; }
+  @media screen and (min-width: 30em) {
+    .basic-label {
+      padding: 0.75rem 0; } }
 
 .basic-input {
   display: block;
   width: 100%;
+  background-color: #FFF;
   border-radius: 3px;
   border-width: 1px;
-  border-color: rgba(0, 0, 0, 0.3); }
+  border-color: rgba(0, 0, 0, 0.3);
+  line-height: 1.25rem;
+  padding: calc(0.625rem - 1px); }
+  @media screen and (min-width: 30em) {
+    .basic-input {
+      padding: calc(0.75rem - 1px);
+      line-height: 1.5rem; } }
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .basic-input {
+      padding-top: calc(0.75rem + 1px * 2);
+      padding-bottom: calc(0.75rem + 1px * 2); } }
+
+select.basic-input {
+  padding: 0 calc(0.625rem - 1px);
+  height: 2.5rem; }
+  @media screen and (min-width: 30em) {
+    select.basic-input {
+      padding: calc(0.75rem + 1px);
+      height: 3rem; } }
 
 .basic-textarea {
   display: block;
   width: 100%;
   border-radius: 3px;
   border-width: 1px;
-  border-color: rgba(0, 0, 0, 0.3); }
+  border-color: rgba(0, 0, 0, 0.3);
+  padding: calc(0.625rem - 1px); }
+  @media screen and (min-width: 30em) {
+    .basic-textarea {
+      padding: calc(0.75rem - 1px); } }
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .basic-textarea {
+      padding-top: calc(0.75rem + 1px * 2);
+      padding-bottom: calc(0.75rem + 1px * 7); } }
 
 .checkradio__input, .checkradio__input--check, .checkradio__input--radio {
   position: absolute;
   left: 0;
-  top: 2px; }
+  top: 0.625rem;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%); }
+  @media screen and (min-width: 30em) {
+    .checkradio__input, .checkradio__input--check, .checkradio__input--radio {
+      top: 0.75rem; } }
 
 .checkradio__label {
   display: block;
   position: relative;
-  padding-left: 20px; }
+  padding-left: 20px;
+  margin-bottom: 1.25rem; }
+  @media screen and (min-width: 30em) {
+    .checkradio__label {
+      margin-bottom: 1.5rem; } }
 
 .button, .button--secondary {
   text-transform: uppercase;
-  padding: 0 5px;
   border: none;
   border-radius: 3px;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5); }
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+  padding: 0.625rem;
+  display: block;
+  width: 100%;
+  margin-bottom: 1.25rem; }
   .button:active, .button--secondary:active {
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.5); }
+  @media screen and (min-width: 30em) {
+    .button, .button--secondary {
+      padding: 0.75rem;
+      display: inline-block;
+      vertical-align: middle;
+      width: auto;
+      margin-bottom: 1.5rem; } }
+  textarea + .button, textarea + .button--secondary {
+    margin-top: 1.25rem; }
+    @media screen and (min-width: 30em) {
+      textarea + .button, textarea + .button--secondary {
+        margin-top: 1.5rem; } }
 
 .button {
   background-color: #DDD; }
@@ -457,20 +559,35 @@ p {
     background-color: #666;
     color: white; }
 
-.basic-table {
+.basic-table, .basic-table--border {
   width: 100%; }
-  .basic-table th, .basic-table td {
+  .basic-table th, .basic-table--border th, .basic-table td, .basic-table--border td {
     text-align: left;
-    border-bottom: 1px solid #DDD; }
+    padding: 0.625rem; }
+    @media screen and (min-width: 30em) {
+      .basic-table th, .basic-table--border th, .basic-table td, .basic-table--border td {
+        padding: 0.75rem; } }
+
+.basic-table--border th, .basic-table--border td {
+  padding-top: calc(0.625rem - 1px);
+  border-bottom: 1px solid #DDD; }
+  @media screen and (min-width: 30em) {
+    .basic-table--border th, .basic-table--border td {
+      padding-top: calc(0.75rem - 1px); } }
 
 #SvgContainer {
   display: none; }
 
 .icon--twitter, .icon--facebook {
   display: inline-block;
-  height: 44px;
-  width: 44px;
+  vertical-align: middle;
+  height: 40px;
+  width: 40px;
   color: red; }
+  @media screen and (min-width: 30em) {
+    .icon--twitter, .icon--facebook {
+      height: 48px;
+      width: 48px; } }
   .no-svg .icon--twitter use, .no-svg .icon--facebook use {
     display: none; }
 
@@ -478,6 +595,12 @@ p {
   fill: blue; }
 #facebook path:nth-child(2) {
   fill: green; }
+
+.basic-list__item + .basic-list__item {
+  margin-top: 1.25rem; }
+  @media screen and (min-width: 30em) {
+    .basic-list__item + .basic-list__item {
+      margin-top: 1.5rem; } }
 
 .main-header {
   margin: 0 10px; }
@@ -492,3 +615,9 @@ p {
   display: block;
   padding: 10px;
   text-align: center; }
+
+.h-push-bottom {
+  margin-bottom: 1.25rem; }
+  @media screen and (min-width: 30em) {
+    .h-push-bottom {
+      margin-bottom: 1.5rem; } }

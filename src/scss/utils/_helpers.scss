@@ -1,0 +1,7 @@
+.h-push-bottom {
+    margin-bottom: $base-line-height;
+
+    @media #{$scale-query} {
+        margin-bottom: $base-line-height2;
+    }
+}
