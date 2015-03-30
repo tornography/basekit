@@ -44,11 +44,11 @@ html {
 
 /* debug */
 body {
-    background-image: linear-gradient(transparent 19px, rgba(255,0,0,0.5) 19px);
+    //background-image: linear-gradient(transparent 19px, rgba(255,0,0,0.5) 19px);
     background-size: 20px 20px;
 
     @media #{$scale-query} {
-        background-image: linear-gradient(transparent 23px, rgba(255,0,0,0.5) 23px);
+        //background-image: linear-gradient(transparent 23px, rgba(255,0,0,0.5) 23px);
         background-size: 24px 24px;
     }
 }
@@ -73,7 +73,7 @@ h1 {
     margin-bottom: $base-line-height * 1;
 
     &::before {
-        content: "(" + font-scale(3,$scale) + ") ";
+        content: "(" + font-scale(3,$scale) + "/" + get-lineheight(font-scale(3,$scale),$base-line-height) + ") ";
     }
 
     @media #{$scale-query} {
@@ -97,7 +97,7 @@ h2 {
     margin-bottom: $base-line-height * 1;
 
     &::before {
-        content: "(" + font-scale(2,$scale) + ") ";
+        content: "(" + font-scale(2,$scale) + "/" + get-lineheight(font-scale(2,$scale),$base-line-height) + ") ";
     }
 
     @media #{$scale-query} {
@@ -108,7 +108,7 @@ h2 {
         margin-bottom: $base-line-height2 * 1;
 
         &::before {
-            content: "(" + font-scale(2,$scale2) + ") ";
+            content: "(" + font-scale(2,$scale2) + "/" + get-lineheight(font-scale(2,$scale2),$base-line-height2) + ") ";
         }
     }
 }
@@ -121,7 +121,7 @@ h3 {
     margin-bottom: $base-line-height * 1;
 
     &::before {
-        content: "(" + font-scale(1,$scale) + ") ";
+        content: "(" + font-scale(1,$scale) + "/" + get-lineheight(font-scale(1,$scale),$base-line-height) + ") ";
     }
 
     @media #{$scale-query} {
@@ -132,7 +132,7 @@ h3 {
         margin-bottom: $base-line-height2 * 1;
 
         &::before {
-            content: "(" + font-scale(1,$scale2) + ") ";
+            content: "(" + font-scale(1,$scale2) + "/" + get-lineheight(font-scale(1,$scale2),$base-line-height2) + ") ";
         }
     }
 }
@@ -145,7 +145,7 @@ h4 {
     margin-bottom: $base-line-height * 1;
 
     &::before {
-        content: "(" + font-scale(0,$scale) + ") ";
+        content: "(" + font-scale(0,$scale) + "/" + get-lineheight(font-scale(0,$scale),$base-line-height) + ") ";
     }
 
     @media #{$scale-query} {
@@ -156,7 +156,7 @@ h4 {
         margin-bottom: $base-line-height2 * 1;
 
         &::before {
-            content: "(" + font-scale(0,$scale2) + ") ";
+            content: "(" + font-scale(0,$scale2) + "/" + get-lineheight(font-scale(0,$scale2),$base-line-height2) + ") ";
         }
     }
 }

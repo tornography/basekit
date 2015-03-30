@@ -335,11 +335,9 @@ html {
 
 /* debug */
 body {
-  background-image: linear-gradient(transparent 19px, rgba(255, 0, 0, 0.5) 19px);
   background-size: 20px 20px; }
   @media screen and (min-width: 30em) {
     body {
-      background-image: linear-gradient(transparent 23px, rgba(255, 0, 0, 0.5) 23px);
       background-size: 24px 24px; } }
 
 body {
@@ -356,7 +354,7 @@ h1 {
   margin-top: 2.5rem;
   margin-bottom: 1.25rem; }
   h1::before {
-    content: "(1.95313rem) "; }
+    content: "(1.95313rem/2.5rem) "; }
   @media screen and (min-width: 30em) {
     h1 {
       font-size: 3.375rem;
@@ -372,7 +370,7 @@ h2 {
   margin-top: 2.5rem;
   margin-bottom: 1.25rem; }
   h2::before {
-    content: "(1.5625rem) "; }
+    content: "(1.5625rem/2.5rem) "; }
   @media screen and (min-width: 30em) {
     h2 {
       font-size: 2.25rem;
@@ -380,7 +378,7 @@ h2 {
       margin-top: 1.5rem;
       margin-bottom: 1.5rem; }
       h2::before {
-        content: "(2.25rem) "; } }
+        content: "(2.25rem/3rem) "; } }
 
 h3 {
   font-size: 1.25rem;
@@ -388,7 +386,7 @@ h3 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem; }
   h3::before {
-    content: "(1.25rem) "; }
+    content: "(1.25rem/1.25rem) "; }
   @media screen and (min-width: 30em) {
     h3 {
       font-size: 1.5rem;
@@ -396,7 +394,7 @@ h3 {
       margin-top: 1.5rem;
       margin-bottom: 1.5rem; }
       h3::before {
-        content: "(1.5rem) "; } }
+        content: "(1.5rem/1.5rem) "; } }
 
 h4 {
   font-size: 1rem;
@@ -404,7 +402,7 @@ h4 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem; }
   h4::before {
-    content: "(1rem) "; }
+    content: "(1rem/1.25rem) "; }
   @media screen and (min-width: 30em) {
     h4 {
       font-size: 1rem;
@@ -412,7 +410,7 @@ h4 {
       margin-top: 1.5rem;
       margin-bottom: 1.5rem; }
       h4::before {
-        content: "(1rem) "; } }
+        content: "(1rem/1.5rem) "; } }
 
 h5, h6 {
   line-height: 1.25rem;
@@ -560,7 +558,11 @@ select.basic-input {
     color: white; }
 
 .basic-table, .basic-table--border {
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 1.25rem; }
+  @media screen and (min-width: 30em) {
+    .basic-table, .basic-table--border {
+      margin-bottom: 1.5rem; } }
   .basic-table th, .basic-table--border th, .basic-table td, .basic-table--border td {
     text-align: left;
     padding: 0.625rem; }
@@ -601,6 +603,12 @@ select.basic-input {
   @media screen and (min-width: 30em) {
     .basic-list__item + .basic-list__item {
       margin-top: 1.5rem; } }
+
+.basic-list--small .basic-list__item + .basic-list__item {
+  margin-top: 0; }
+  @media screen and (min-width: 30em) {
+    .basic-list--small .basic-list__item + .basic-list__item {
+      margin-top: 0; } }
 
 .main-header {
   margin: 0 10px; }
