@@ -1,16 +1,16 @@
 $input-border-width: 1px;
 $input-border-radius: 3px;
 $input-border-color: rgba(0,0,0,0.3);
-$input-line-height: $base-line-height;
-$input-line-height2: $base-line-height2;
-$input-half-padding: $base-line-height / 2;
-$input-half-padding2: $base-line-height2 / 2;
+$input-line-height: $base-line-mobile;
+$input-line-height2: $base-line-gtmobile;
+$input-half-padding: $base-line-mobile / 2;
+$input-half-padding2: $base-line-gtmobile / 2;
 
 .basic-label {
     display: block;
-    padding: ($base-line-height / 2) 0;
-    @media #{$scale-query} {
-        padding: ($base-line-height2 / 2) 0;
+    padding: ($base-line-mobile / 2) 0;
+    @media #{$scale-mobile-query} {
+        padding: ($base-line-gtmobile / 2) 0;
     }
 }
 
@@ -24,7 +24,7 @@ $input-half-padding2: $base-line-height2 / 2;
     line-height: $input-line-height;
     padding: calc(#{$input-half-padding} - #{$input-border-width});
 
-    @media #{$scale-query} {
+    @media #{$scale-mobile-query} {
         padding: calc(#{$input-half-padding2} - #{$input-border-width});
         line-height: $input-line-height2;
     }
@@ -40,7 +40,7 @@ select.basic-input {
     padding: 0 calc(#{$input-half-padding} - #{$input-border-width});
     height: $input-line-height * 2;
 
-    @media #{$scale-query} {
+    @media #{$scale-mobile-query} {
         padding: calc(#{$input-half-padding2} + #{$input-border-width});
         height: $input-line-height2 * 2;
     }
@@ -55,7 +55,7 @@ select.basic-input {
 
     padding: calc(#{$input-half-padding} - #{$input-border-width});
 
-    @media #{$scale-query} {
+    @media #{$scale-mobile-query} {
         padding: calc(#{$input-half-padding2} - #{$input-border-width});
     }
 
@@ -75,7 +75,7 @@ select.basic-input {
     top: $input-half-padding;
     transform: translateY(-50%);
 
-    @media #{$scale-query} {
+    @media #{$scale-mobile-query} {
         top: $input-half-padding2;
     }
 }
@@ -84,10 +84,10 @@ select.basic-input {
     display: block;
     position: relative;
     padding-left: 20px;
-    margin-bottom: $base-line-height;
+    margin-bottom: $base-line-mobile;
 
-    @media #{$scale-query} {
-        margin-bottom: $base-line-height2;
+    @media #{$scale-mobile-query} {
+        margin-bottom: $base-line-gtmobile;
     }
 }
 .checkradio__input {

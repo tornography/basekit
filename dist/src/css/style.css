@@ -1,3 +1,9 @@
+.h-push-bottom {
+  margin-bottom: 1.25rem; }
+  @media screen and (min-width: 30em) {
+    .h-push-bottom {
+      margin-bottom: 1.5rem; } }
+
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -353,64 +359,48 @@ h1 {
   line-height: 2.5rem;
   margin-top: 2.5rem;
   margin-bottom: 1.25rem; }
-  h1::before {
-    content: "(1.95313rem/2.5rem) "; }
   @media screen and (min-width: 30em) {
     h1 {
       font-size: 3.375rem;
       line-height: 4.5rem;
       margin-top: 1.5rem;
-      margin-bottom: 1.5rem; }
-      h1::before {
-        content: "(3.375rem/4.5rem) "; } }
+      margin-bottom: 1.5rem; } }
 
 h2 {
   font-size: 1.5625rem;
   line-height: 2.5rem;
   margin-top: 2.5rem;
   margin-bottom: 1.25rem; }
-  h2::before {
-    content: "(1.5625rem/2.5rem) "; }
   @media screen and (min-width: 30em) {
     h2 {
       font-size: 2.25rem;
       line-height: 3rem;
       margin-top: 1.5rem;
-      margin-bottom: 1.5rem; }
-      h2::before {
-        content: "(2.25rem/3rem) "; } }
+      margin-bottom: 1.5rem; } }
 
 h3 {
   font-size: 1.25rem;
   line-height: 1.25rem;
   margin-top: 1.25rem;
   margin-bottom: 1.25rem; }
-  h3::before {
-    content: "(1.25rem/1.25rem) "; }
   @media screen and (min-width: 30em) {
     h3 {
       font-size: 1.5rem;
       line-height: 1.5rem;
       margin-top: 1.5rem;
-      margin-bottom: 1.5rem; }
-      h3::before {
-        content: "(1.5rem/1.5rem) "; } }
+      margin-bottom: 1.5rem; } }
 
 h4 {
   font-size: 1rem;
   line-height: 1.25rem;
   margin-top: 1.25rem;
   margin-bottom: 1.25rem; }
-  h4::before {
-    content: "(1rem/1.25rem) "; }
   @media screen and (min-width: 30em) {
     h4 {
       font-size: 1rem;
       line-height: 1.5rem;
       margin-top: 1.5rem;
-      margin-bottom: 1.5rem; }
-      h4::before {
-        content: "(1rem/1.5rem) "; } }
+      margin-bottom: 1.5rem; } }
 
 h5, h6 {
   line-height: 1.25rem;
@@ -421,8 +411,6 @@ h5, h6 {
       line-height: 1.5rem;
       margin-top: 1.5rem;
       margin-bottom: 1.5rem; } }
-  h5::before, h6::before {
-    content: "(0.8rem) "; }
 
 small, code {
   line-height: 1.1rem; }
@@ -623,9 +611,3 @@ select.basic-input {
   display: block;
   padding: 10px;
   text-align: center; }
-
-.h-push-bottom {
-  margin-bottom: 1.25rem; }
-  @media screen and (min-width: 30em) {
-    .h-push-bottom {
-      margin-bottom: 1.5rem; } }

@@ -1,7 +1,7 @@
 .h-push-bottom {
-    margin-bottom: $base-line-height;
+    margin-bottom: $base-line-mobile;
 
-    @media #{$scale-query} {
-        margin-bottom: $base-line-height2;
+    @media #{$scale-mobile-query} {
+        margin-bottom: $base-line-gtmobile;
     }
 }

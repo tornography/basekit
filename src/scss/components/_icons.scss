@@ -9,7 +9,7 @@
     width: 40px;
     color: red;
 
-    @media #{$scale-query} {
+    @media #{$scale-mobile-query} {
         height: 48px;
         width: 48px;
     }

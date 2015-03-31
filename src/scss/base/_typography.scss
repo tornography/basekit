@@ -1,11 +1,3 @@
-$scale-query: "screen and (min-width: 30em)";
-$base-font-size: 1rem;
-$base-line-height: 1.25rem;
-$base-line-height2: 1.5rem;
-$scale: 1.25;
-$scale2: 1.5;
-
-
 html {
     font-size: 16px;
 }
@@ -15,7 +7,7 @@ body {
     //background-image: linear-gradient(transparent 19px, rgba(255,0,0,0.5) 19px);
     background-size: 20px 20px;
 
-    @media #{$scale-query} {
+    @media #{$scale-mobile-query} {
         //background-image: linear-gradient(transparent 23px, rgba(255,0,0,0.5) 23px);
         background-size: 24px 24px;
     }
@@ -26,149 +18,108 @@ body {
     color: $primary-color;
 
     font-size: $base-font-size;
-    line-height: $base-line-height;
+    line-height: $base-line-mobile;
 
-    @media #{$scale-query} {
-        line-height: $base-line-height2;
+    @media #{$scale-mobile-query} {
+        line-height: $base-line-gtmobile;
     }
 }
 
 h1 {
-    font-size: font-scale(3,$scale);
-    line-height: get-lineheight(font-scale(3,$scale),$base-line-height);
+    font-size: font-scale(3,$scale-mobile);
+    line-height: get-lineheight(3,$scale-mobile,$base-line-mobile);
+    margin-top: $base-line-mobile * 2;
+    margin-bottom: $base-line-mobile * 1;
 
-    margin-top: $base-line-height * 2;
-    margin-bottom: $base-line-height * 1;
-
-    &::before {
-        content: "(" + font-scale(3,$scale) + "/" + get-lineheight(font-scale(3,$scale),$base-line-height) + ") ";
-    }
-
-    @media #{$scale-query} {
-        font-size: font-scale(3,$scale2);
-        line-height: get-lineheight(font-scale(3,$scale2),$base-line-height2);
-
-        margin-top: $base-line-height2 * 1;
-        margin-bottom: $base-line-height2 * 1;
-
-        &::before {
-            content: "(" + font-scale(3,$scale2) + "/" + get-lineheight(font-scale(3,$scale2),$base-line-height2) + ") ";
-        }
+    @media #{$scale-mobile-query} {
+        font-size: font-scale(3,$scale-mobile-gtmobile);
+        line-height: get-lineheight(3,$scale-mobile-gtmobile,$base-line-gtmobile);
+        margin-top: $base-line-gtmobile * 1;
+        margin-bottom: $base-line-gtmobile * 1;
     }
 }
 
 h2 {
-    font-size: font-scale(2,$scale);
-    line-height: get-lineheight(font-scale(2,$scale),$base-line-height);
+    font-size: font-scale(2,$scale-mobile);
+    line-height: get-lineheight(2,$scale-mobile,$base-line-mobile);
+    margin-top: $base-line-mobile * 2;
+    margin-bottom: $base-line-mobile * 1;
 
-    margin-top: $base-line-height * 2;
-    margin-bottom: $base-line-height * 1;
-
-    &::before {
-        content: "(" + font-scale(2,$scale) + "/" + get-lineheight(font-scale(2,$scale),$base-line-height) + ") ";
-    }
-
-    @media #{$scale-query} {
-        font-size: font-scale(2,$scale2);
-        line-height: get-lineheight(font-scale(2,$scale2),$base-line-height2);
-
-        margin-top: $base-line-height2 * 1;
-        margin-bottom: $base-line-height2 * 1;
-
-        &::before {
-            content: "(" + font-scale(2,$scale2) + "/" + get-lineheight(font-scale(2,$scale2),$base-line-height2) + ") ";
-        }
+    @media #{$scale-mobile-query} {
+        font-size: font-scale(2,$scale-mobile-gtmobile);
+        line-height: get-lineheight(2,$scale-mobile-gtmobile,$base-line-gtmobile);
+        margin-top: $base-line-gtmobile * 1;
+        margin-bottom: $base-line-gtmobile * 1;
     }
 }
 
 h3 {
-    font-size: font-scale(1,$scale);
-    line-height: get-lineheight(font-scale(1,$scale),$base-line-height);
+    font-size: font-scale(1,$scale-mobile);
+    line-height: get-lineheight(1,$scale-mobile,$base-line-mobile);
+    margin-top: $base-line-mobile * 1;
+    margin-bottom: $base-line-mobile * 1;
 
-    margin-top: $base-line-height * 1;
-    margin-bottom: $base-line-height * 1;
-
-    &::before {
-        content: "(" + font-scale(1,$scale) + "/" + get-lineheight(font-scale(1,$scale),$base-line-height) + ") ";
-    }
-
-    @media #{$scale-query} {
-        font-size: font-scale(1,$scale2);
-        line-height: get-lineheight(font-scale(1,$scale2),$base-line-height2);
-
-        margin-top: $base-line-height2 * 1;
-        margin-bottom: $base-line-height2 * 1;
-
-        &::before {
-            content: "(" + font-scale(1,$scale2) + "/" + get-lineheight(font-scale(1,$scale2),$base-line-height2) + ") ";
-        }
+    @media #{$scale-mobile-query} {
+        font-size: font-scale(1,$scale-mobile-gtmobile);
+        line-height: get-lineheight(1,$scale-mobile-gtmobile,$base-line-gtmobile);
+        margin-top: $base-line-gtmobile * 1;
+        margin-bottom: $base-line-gtmobile * 1;
     }
 }
 
 h4 {
     font-size: $base-font-size;
-    line-height: $base-line-height;
+    line-height: $base-line-mobile;
+    margin-top: $base-line-mobile * 1;
+    margin-bottom: $base-line-mobile * 1;
 
-    margin-top: $base-line-height * 1;
-    margin-bottom: $base-line-height * 1;
-
-    &::before {
-        content: "(" + font-scale(0,$scale) + "/" + get-lineheight(font-scale(0,$scale),$base-line-height) + ") ";
-    }
-
-    @media #{$scale-query} {
+    @media #{$scale-mobile-query} {
         font-size: $base-font-size;
-        line-height: $base-line-height2;
-
-        margin-top: $base-line-height2 * 1;
-        margin-bottom: $base-line-height2 * 1;
-
-        &::before {
-            content: "(" + font-scale(0,$scale2) + "/" + get-lineheight(font-scale(0,$scale2),$base-line-height2) + ") ";
-        }
+        line-height: $base-line-gtmobile;
+        margin-top: $base-line-gtmobile * 1;
+        margin-bottom: $base-line-gtmobile * 1;
     }
 }
 
 h5,
 h6 {
     //font-size: font-scale(-1);
-    line-height: get-lineheight(font-scale(-1,$scale),$base-line-height);
-    margin-top: $base-line-height * 1;
-    margin-bottom: $base-line-height * 1;
+    line-height: get-lineheight(-1,$scale-mobile,$base-line-mobile);
+    margin-top: $base-line-mobile * 1;
+    margin-bottom: $base-line-mobile * 1;
 
-    @media #{$scale-query} {
-        line-height: get-lineheight(font-scale(-1,$scale2),$base-line-height2);
-        margin-top: $base-line-height2 * 1;
-        margin-bottom: $base-line-height2 * 1;
-    }
-
-    &::before {
-        content: "(" + font-scale(-1,$scale) + ") ";
+    @media #{$scale-mobile-query} {
+        line-height: get-lineheight(-1,$scale-mobile-gtmobile,$base-line-gtmobile);
+        margin-top: $base-line-gtmobile * 1;
+        margin-bottom: $base-line-gtmobile * 1;
     }
 }
+
 small,
 code {
     line-height: 1.1rem;
     
-    //line-height: get-lineheight(font-scale(-1,$scale),$base-line-height - 0.05); //1.25rem - 0.05rem hack
+    //line-height: get-lineheight(font-scale(-1,$scale-mobile),$base-line-mobile - 0.05); //1.25rem - 0.05rem hack
 
-    @media #{$scale-query} {
+    @media #{$scale-mobile-query} {
         line-height: 1.2rem;
-    //    line-height: get-lineheight(font-scale(-1,$scale2),$base-line-height2 - 0.2); //1.5rem - 0.2rem hack
+    //    line-height: get-lineheight(font-scale(-1,$scale-mobile-gtmobile),$base-line-gtmobile - 0.2); //1.5rem - 0.2rem hack
     }
 }
+
 pre code {
-    line-height: $base-line-height;
+    line-height: $base-line-mobile;
 
-    @media #{$scale-query} {
-        line-height: $base-line-height2;
+    @media #{$scale-mobile-query} {
+        line-height: $base-line-gtmobile;
     }
 }
-small {
-    font-size: font-scale(-1,$scale);
 
-    @media #{$scale-query} {
-        font-size: font-scale(-1,$scale2);
+small {
+    font-size: font-scale(-1,$scale-mobile);
+
+    @media #{$scale-mobile-query} {
+        font-size: font-scale(-1,$scale-mobile-gtmobile);
     }
 }
 
@@ -178,23 +129,21 @@ ol,
 pre,
 dl {
     font-size: $base-font-size;
-    line-height: $base-line-height;
+    line-height: $base-line-mobile;
+    margin-top: $base-line-mobile * 1;
+    margin-bottom: $base-line-mobile * 1;
 
-    margin-top: $base-line-height * 1;
-    margin-bottom: $base-line-height * 1;
-
-    @media #{$scale-query} {
-        line-height: $base-line-height2;
-
-        margin-top: $base-line-height2 * 1;
-        margin-bottom: $base-line-height2 * 1;
+    @media #{$scale-mobile-query} {
+        line-height: $base-line-gtmobile;
+        margin-top: $base-line-gtmobile * 1;
+        margin-bottom: $base-line-gtmobile * 1;
     }
 }
 
 blockquote {
-    margin: $base-line-height * 2;
+    margin: $base-line-mobile * 2;
 
-    @media #{$scale-query} {
-        margin: $base-line-height2 * 2;
+    @media #{$scale-mobile-query} {
+        margin: $base-line-gtmobile * 2;
     }
 }

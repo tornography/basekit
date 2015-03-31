@@ -2,10 +2,10 @@
 
 }
 .basic-list__item + .basic-list__item {
-    margin-top: $base-line-height;
+    margin-top: $base-line-mobile;
 
-    @media #{$scale-query} {
-        margin-top: $base-line-height2;
+    @media #{$scale-mobile-query} {
+        margin-top: $base-line-gtmobile;
     }
 }
 
@@ -13,7 +13,7 @@
     .basic-list__item + .basic-list__item {
         margin-top: 0;
 
-        @media #{$scale-query} {
+        @media #{$scale-mobile-query} {
             margin-top: 0;
         }
     }

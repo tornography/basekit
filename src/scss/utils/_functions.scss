@@ -1,16 +1,5 @@
-// add a line-height, till font-size fits in
-@function get-lineheight($fontsize,$height: $base-line-height){
-    $lineheight: $height;
-
-    @while $fontsize > $lineheight {
-        $lineheight: $lineheight + $height;
-    }
-
-    @return $lineheight;
-}
-
 // multiply with scalefactor
-@function font-scale($times,$intscale){
+@function font-scale($times:0, $intscale:$scale-mobile){
     $fontsize: $base-font-size;
 
     @if $times > 0 {
@@ -28,3 +17,16 @@
 
     @return $fontsize;
 }
+
+// add a line-height, till font-size fits in
+@function get-lineheight($times:0, $intscale:$scale-mobile, $height:$base-line-mobile){
+    $fontsize: font-scale($times,$intscale);
+    $lineheight: $height;
+
+    @while $fontsize > $lineheight {
+        $lineheight: $lineheight + $height;
+    }
+
+    @return $lineheight;
+}
+

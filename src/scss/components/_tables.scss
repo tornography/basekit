@@ -1,16 +1,16 @@
 %tablebasic {
     width: 100%;
-    margin-bottom: $base-line-height;
+    margin-bottom: $base-line-mobile;
 
-    @media #{$scale-query} {
-        margin-bottom: $base-line-height2;
+    @media #{$scale-mobile-query} {
+        margin-bottom: $base-line-gtmobile;
     }
 
     th,td {
         text-align: left;
         padding: $input-half-padding;
 
-        @media #{$scale-query} {
+        @media #{$scale-mobile-query} {
             padding: $input-half-padding2;
         }        
     }
@@ -25,7 +25,7 @@
             padding-top: calc(#{$input-half-padding} - 1px);
             border-bottom: 1px solid #DDD;
 
-            @media #{$scale-query} {
+            @media #{$scale-mobile-query} {
                 padding-top: calc(#{$input-half-padding2} - 1px);
             }
         }
