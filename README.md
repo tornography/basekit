@@ -17,3 +17,4 @@ One main goal is to set up a baseline grid, so the vertical rhythm is nice and s
 for mobile and tablet+ (30em). Based on the settings at [gridlover](http://www.gridlover.net/app/) I used a
 line-height/scale-factor of **1.25** for mobile, and **1.5** for tablet and up, while using a base font-size of 16px.
 I think these are good values, to keep the readability good on most devices.
+
