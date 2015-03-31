@@ -1,4 +1,4 @@
-vendor/
-components/
-node_modules/
-.sass-cache/
+/vendor
+/components
+/node_modules
+/.sass-cache

@@ -1,0 +1,34 @@
+%tablebasic {
+    width: 100%;
+    margin-bottom: $base-line-height;
+
+    @media #{$scale-query} {
+        margin-bottom: $base-line-height2;
+    }
+
+    th,td {
+        text-align: left;
+        padding: $input-half-padding;
+
+        @media #{$scale-query} {
+            padding: $input-half-padding2;
+        }        
+    }
+}
+.basic-table {
+    @extend %tablebasic;
+
+    &--border {
+        @extend %tablebasic;
+
+        th,td {
+            padding-top: calc(#{$input-half-padding} - 1px);
+            border-bottom: 1px solid #DDD;
+
+            @media #{$scale-query} {
+                padding-top: calc(#{$input-half-padding2} - 1px);
+            }
+        }
+
+    }
+}

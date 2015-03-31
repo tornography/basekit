@@ -5,38 +5,6 @@ $base-line-height2: 1.5rem;
 $scale: 1.25;
 $scale2: 1.5;
 
-// add a line-height, till font-size fits in
-@function get-lineheight($fontsize,$height: $base-line-height){
-    $lineheight: $height;
-
-    @while $fontsize > $lineheight {
-        $lineheight: $lineheight + $height;
-    }
-
-    @return $lineheight;
-}
-
-// multiply with scalefactor
-@function font-scale($times,$intscale){
-    $fontsize: $base-font-size;
-
-    @if $times > 0 {
-        @while $times > 0 {
-            $fontsize: $fontsize * $intscale;
-            $times: $times - 1;
-        }
-    }
-    @if $times < 0 {
-        @while $times < 0 {
-            $fontsize: $fontsize / $intscale;
-            $times: $times + 1;
-        }
-    }
-
-    @return $fontsize;
-}
-
-
 
 html {
     font-size: 16px;

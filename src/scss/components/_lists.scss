@@ -1,0 +1,20 @@
+.basic-list {
+
+}
+.basic-list__item + .basic-list__item {
+    margin-top: $base-line-height;
+
+    @media #{$scale-query} {
+        margin-top: $base-line-height2;
+    }
+}
+
+.basic-list--small {
+    .basic-list__item + .basic-list__item {
+        margin-top: 0;
+
+        @media #{$scale-query} {
+            margin-top: 0;
+        }
+    }
+}

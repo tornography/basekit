@@ -1,0 +1,39 @@
+#SvgContainer {
+    display: none;
+}
+
+%iconbase {
+    display: inline-block;
+    vertical-align: middle;
+    height: 40px;
+    width: 40px;
+    color: red;
+
+    @media #{$scale-query} {
+        height: 48px;
+        width: 48px;
+    }
+
+    .no-svg & {
+        use {
+            display: none;
+        }
+    }
+}
+
+.icon--twitter {
+    @extend %iconbase;
+}
+
+#facebook {
+    path:nth-child(1){
+        fill: blue;
+    }
+
+    path:nth-child(2){
+        fill: green;
+    }
+}
+.icon--facebook {
+    @extend %iconbase;
+}

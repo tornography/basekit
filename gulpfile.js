@@ -13,7 +13,7 @@ var gulp = require('gulp'),
 gulp.task('sass', function(){
     return gulp
         .src('src/scss/main.scss')
-        .pipe(sass())
+        .pipe(sass().on('error', errorHandler))
         .pipe(prefix({
             browsers: ['last 2 versions','ie 9']
         }))
@@ -24,7 +24,7 @@ gulp.task('sass', function(){
 gulp.task('concat', function(){
     return gulp
         .src(['src/js/jquery-2.1.3.js','src/js/script.js'])
-        .pipe(concat('script.js'))
+        .pipe(concat('script.js').on('error', errorHandler))
         .pipe(gulp.dest('./dist/src/js/'));
 });
 
@@ -37,7 +37,7 @@ gulp.task('svg', function(){
             },
             parserOptions: { xmlMode: true }
         }))
-        .pipe(svgmin())
+        .pipe(svgmin().on('error', errorHandler))
         .pipe(svgstore({
             inlineSvg: true
         }))
@@ -68,3 +68,8 @@ gulp.task('svg2png', function(){
 gulp.task('default',['sass','svg','svgfallback','concat'], function() {
     
 });
+
+function errorHandler (error) {
+  console.log(error.toString());
+  this.emit('end');
+}

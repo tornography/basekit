@@ -1,0 +1,103 @@
+$input-border-width: 1px;
+$input-border-radius: 3px;
+$input-border-color: rgba(0,0,0,0.3);
+$input-line-height: $base-line-height;
+$input-line-height2: $base-line-height2;
+$input-half-padding: $base-line-height / 2;
+$input-half-padding2: $base-line-height2 / 2;
+
+.basic-label {
+    display: block;
+    padding: ($base-line-height / 2) 0;
+    @media #{$scale-query} {
+        padding: ($base-line-height2 / 2) 0;
+    }
+}
+
+.basic-input {
+    display: block;
+    width: 100%;
+    background-color: #FFF;
+    border-radius: $input-border-radius;
+    border-width: $input-border-width;
+    border-color: $input-border-color;
+    line-height: $input-line-height;
+    padding: calc(#{$input-half-padding} - #{$input-border-width});
+
+    @media #{$scale-query} {
+        padding: calc(#{$input-half-padding2} - #{$input-border-width});
+        line-height: $input-line-height2;
+    }
+
+    // IE10+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        padding-top: calc(#{$input-half-padding2} + #{$input-border-width} * 2);
+        padding-bottom: calc(#{$input-half-padding2} + #{$input-border-width} * 2);
+    }
+}
+
+select.basic-input {
+    padding: 0 calc(#{$input-half-padding} - #{$input-border-width});
+    height: $input-line-height * 2;
+
+    @media #{$scale-query} {
+        padding: calc(#{$input-half-padding2} + #{$input-border-width});
+        height: $input-line-height2 * 2;
+    }
+}
+
+.basic-textarea {
+    display: block;
+    width: 100%;
+    border-radius: $input-border-radius;
+    border-width: $input-border-width;
+    border-color: $input-border-color;
+
+    padding: calc(#{$input-half-padding} - #{$input-border-width});
+
+    @media #{$scale-query} {
+        padding: calc(#{$input-half-padding2} - #{$input-border-width});
+    }
+
+    // IE10+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        padding-top: calc(#{$input-half-padding2} + #{$input-border-width} * 2);
+        padding-bottom: calc(#{$input-half-padding2} + #{$input-border-width} * 7);
+    }
+}
+
+
+
+
+%checkradio {
+    position: absolute;
+    left: 0;
+    top: $input-half-padding;
+    transform: translateY(-50%);
+
+    @media #{$scale-query} {
+        top: $input-half-padding2;
+    }
+}
+
+.checkradio__label {
+    display: block;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: $base-line-height;
+
+    @media #{$scale-query} {
+        margin-bottom: $base-line-height2;
+    }
+}
+.checkradio__input {
+    @extend %checkradio;
+
+    &--check {
+        @extend %checkradio;
+    }
+
+    &--radio {
+        @extend %checkradio;
+    }
+}

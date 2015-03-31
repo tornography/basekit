@@ -1,0 +1,44 @@
+$primary-button-color: $secondary-color;
+$secondary-button-color: $primary-color;
+
+%button {
+    text-transform: uppercase;
+    border: none;
+    border-radius: $input-border-radius;
+    box-shadow: 0 2px 2px rgba(0,0,0, 0.5);
+    padding: ($base-line-height / 2);
+    display: block;
+    width: 100%;
+    margin-bottom: $base-line-height;
+
+    &:active {
+        box-shadow: 0 0 1px rgba(0,0,0, 0.5);
+    }
+
+    @media #{$scale-query} {
+        padding: ($base-line-height2 / 2);
+        display: inline-block;
+        vertical-align: middle;
+        width: auto;
+        margin-bottom: $base-line-height2;
+    }
+
+    textarea + & {
+        margin-top: $base-line-height;
+
+        @media #{$scale-query} {
+            margin-top: $base-line-height2;
+        }
+    }
+}
+
+.button {
+    @extend %button;
+    background-color: $primary-button-color;
+
+    &--secondary {
+        @extend %button;
+        background-color: $secondary-button-color;
+        color: white;
+    }
+}
