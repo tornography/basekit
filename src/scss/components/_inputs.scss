@@ -9,7 +9,7 @@ $input-half-padding2: $base-line-gtmobile / 2;
 .basic-label {
     display: block;
     padding: ($base-line-mobile / 2) 0;
-    @media #{$scale-mobile-query} {
+    @include mappy-bp(baseline) {
         padding: ($base-line-gtmobile / 2) 0;
     }
 }
@@ -24,7 +24,7 @@ $input-half-padding2: $base-line-gtmobile / 2;
     line-height: $input-line-height;
     padding: calc(#{$input-half-padding} - #{$input-border-width});
 
-    @media #{$scale-mobile-query} {
+    @include mappy-bp(baseline) {
         padding: calc(#{$input-half-padding2} - #{$input-border-width});
         line-height: $input-line-height2;
     }
@@ -40,7 +40,7 @@ select.basic-input {
     padding: 0 calc(#{$input-half-padding} - #{$input-border-width});
     height: $input-line-height * 2;
 
-    @media #{$scale-mobile-query} {
+    @include mappy-bp(baseline) {
         padding: calc(#{$input-half-padding2} + #{$input-border-width});
         height: $input-line-height2 * 2;
     }
@@ -55,7 +55,7 @@ select.basic-input {
 
     padding: calc(#{$input-half-padding} - #{$input-border-width});
 
-    @media #{$scale-mobile-query} {
+    @include mappy-bp(baseline) {
         padding: calc(#{$input-half-padding2} - #{$input-border-width});
     }
 
@@ -75,7 +75,7 @@ select.basic-input {
     top: $input-half-padding;
     transform: translateY(-50%);
 
-    @media #{$scale-mobile-query} {
+    @include mappy-bp(baseline) {
         top: $input-half-padding2;
     }
 }
@@ -86,7 +86,7 @@ select.basic-input {
     padding-left: 20px;
     margin-bottom: $base-line-mobile;
 
-    @media #{$scale-mobile-query} {
+    @include mappy-bp(baseline) {
         margin-bottom: $base-line-gtmobile;
     }
 }

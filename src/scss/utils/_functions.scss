@@ -1,6 +1,6 @@
 // multiply with scalefactor
 @function font-scale($times:0, $intscale:$scale-mobile){
-    $fontsize: $base-font-size;
+    $fontsize: $body-font-size;
 
     @if $times > 0 {
         @while $times > 0 {

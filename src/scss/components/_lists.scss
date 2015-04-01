@@ -4,7 +4,7 @@
 .basic-list__item + .basic-list__item {
     margin-top: $base-line-mobile;
 
-    @media #{$scale-mobile-query} {
+    @include mappy-bp(baseline) {
         margin-top: $base-line-gtmobile;
     }
 }
@@ -13,7 +13,7 @@
     .basic-list__item + .basic-list__item {
         margin-top: 0;
 
-        @media #{$scale-mobile-query} {
+        @include mappy-bp(baseline) {
             margin-top: 0;
         }
     }

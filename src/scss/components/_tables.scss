@@ -2,7 +2,7 @@
     width: 100%;
     margin-bottom: $base-line-mobile;
 
-    @media #{$scale-mobile-query} {
+    @include mappy-bp(baseline) {
         margin-bottom: $base-line-gtmobile;
     }
 
@@ -10,7 +10,7 @@
         text-align: left;
         padding: $input-half-padding;
 
-        @media #{$scale-mobile-query} {
+        @include mappy-bp(baseline) {
             padding: $input-half-padding2;
         }        
     }
@@ -25,7 +25,7 @@
             padding-top: calc(#{$input-half-padding} - 1px);
             border-bottom: 1px solid #DDD;
 
-            @media #{$scale-mobile-query} {
+            @include mappy-bp(baseline) {
                 padding-top: calc(#{$input-half-padding2} - 1px);
             }
         }

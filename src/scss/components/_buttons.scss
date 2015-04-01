@@ -15,7 +15,7 @@ $secondary-button-color: $primary-color;
         box-shadow: 0 0 1px rgba(0,0,0, 0.5);
     }
 
-    @media #{$scale-mobile-query} {
+    @include mappy-bp(baseline) {
         padding: ($base-line-gtmobile / 2);
         display: inline-block;
         vertical-align: middle;
@@ -26,7 +26,7 @@ $secondary-button-color: $primary-color;
     textarea + & {
         margin-top: $base-line-mobile;
 
-        @media #{$scale-mobile-query} {
+        @include mappy-bp(baseline) {
             margin-top: $base-line-gtmobile;
         }
     }

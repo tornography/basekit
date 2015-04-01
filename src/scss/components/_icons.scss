@@ -9,7 +9,7 @@
     width: 40px;
     color: red;
 
-    @media #{$scale-mobile-query} {
+    @include mappy-bp(baseline) {
         height: 48px;
         width: 48px;
     }

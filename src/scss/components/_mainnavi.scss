@@ -2,7 +2,7 @@
     display: block;
     margin-top: $base-line-mobile;
 
-    @media #{$scale-mobile-query} {
+    @include mappy-bp(baseline) {
         display: inline-block;
         margin-top: $base-line-gtmobile;
     }
@@ -16,7 +16,7 @@
     padding: 0;
     border: 1px solid rgba(0,0,0,0.3);
 
-    @media #{$scale-mobile-query} {
+    @include mappy-bp(baseline) {
         //justify-content: flex-start;
     }
 }
@@ -28,7 +28,7 @@
         border-left: 1px solid rgba(0,0,0,0.3);
     }
 
-    @media #{$scale-mobile-query} {
+    @include mappy-bp(baseline) {
         flex-grow: 0;
     }
 }
@@ -39,8 +39,7 @@
     padding: calc(#{$base-line-mobile}/2 - 1px);
     text-align: center;
 
-
-    @media #{$scale-mobile-query} {
-        padding: alc(#{$base-line-gtmobile}/2 - 1px);
+    @include mappy-bp(baseline) {
+        padding: calc(#{$base-line-gtmobile}/2 - 1px);
     }
 }

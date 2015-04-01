@@ -1,0 +1,27 @@
+{
+  "name": "basekit",
+  "version": "0.2.0",
+  "homepage": "https://github.com/tornography/basekit",
+  "authors": [
+    "mail@mscnuel.koeln"
+  ],
+  "description": "html starting point",
+  "main": "gulpfile.js",
+  "keywords": [
+    "baseline",
+    "reset",
+    "gulp",
+    "twig"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "mappy-breakpoints": "~0.1.1"
+  }
+}

@@ -1,6 +1,14 @@
+//breakpoints; major and minor
+$breakpoints: (
+    'small': 320px,
+    'medium': 480px,
+    'baseline': 480px
+);
+
 //typography
 $scale-mobile-query: "screen and (min-width: 30em)";
-$base-font-size: 1rem;
+$base-font-size: 16px; //html
+$body-font-size: 1rem; //body
 $base-line-mobile: 1.25rem;
 $base-line-gtmobile: 1.5rem;
 $scale-mobile: 1.25;

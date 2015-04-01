@@ -1,7 +1,7 @@
 .h-push-bottom {
     margin-bottom: $base-line-mobile;
 
-    @media #{$scale-mobile-query} {
+    @include mappy-bp(baseline) {
         margin-bottom: $base-line-gtmobile;
     }
 }
