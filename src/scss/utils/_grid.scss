@@ -1,0 +1,14 @@
+/**
+ * bastekit grid
+ */
+
+@mixin kitgrid($num: 12,$of: 12,$gap: 0px){
+    @if round($num) != $num {
+        @error "Not a number";
+    }
+    width: calc(#{$num}/#{$of} * 1% - #{$gap});
+}
+
+body {
+    @include kitgrid();
+}

@@ -1,3 +1,9 @@
+/**
+ * bastekit grid
+ */
+body {
+  width: calc(12/12 * 1% - 0px); }
+
 .h-push-bottom {
   margin-bottom: 1.25rem; }
   @media all and (min-width: 30rem) {
