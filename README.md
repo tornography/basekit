@@ -18,3 +18,8 @@ for mobile and tablet+ (30em). Based on the settings at [gridlover](http://www.g
 line-height/scale-factor of **1.25** for mobile, and **1.5** for tablet and up, while using a base font-size of 16px.
 I think these are good values, to keep the readability good on most devices.
 
+##Icons
+I implemented [gulp-svgstore](https://github.com/w0rm/gulp-svgstore) for generating svg sprites and [gulp-svgfallback](https://github.com/w0rm/gulp-svgfallback) for creating a png fallback sprite. Both are made by [Andrey Kuzmin](https://twitter.com/unsoundscapes). Coloring of the ```path``` elements inside the ```symbol```s are allready set to ```fill="currentColor"``` (example1) but can be colorized separate, like in example2.
+
+##Breakpoints
+For breakpoints I took a bower plugin called [mappy-breakpoints](https://github.com/zellwk/mappy-breakpoints) wich has some advantages I wanted to have, like substracting ```1px``` form ```max-width``` queries, to prevent overlapping. Currently the px values are calculated to rem instead of em, but that's no big deal.
