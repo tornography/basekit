@@ -1,0 +1,4 @@
+@mixin font-and-line($times:0, $intscale:$scale-mobile, $height:$base-line-mobile){
+    font-size: font-scale($times,$intscale);
+    line-height: get-lineheight($times,$intscale,$height);
+};

@@ -26,56 +26,48 @@ body {
 }
 
 h1 {
-    font-size: font-scale(3,$scale-mobile);
-    line-height: get-lineheight(3,$scale-mobile,$base-line-mobile);
+    @include font-and-line(3,$scale-mobile,$base-line-mobile);
     margin-top: $base-line-mobile * 2;
     margin-bottom: $base-line-mobile * 1;
 
     @include mappy-bp(baseline) {
-        font-size: font-scale(3,$scale-mobile-gtmobile);
-        line-height: get-lineheight(3,$scale-mobile-gtmobile,$base-line-gtmobile);
+        @include font-and-line(3,$scale-mobile-gtmobile,$base-line-gtmobile);
         margin-top: $base-line-gtmobile * 1;
         margin-bottom: $base-line-gtmobile * 1;
     }
 }
 
 h2 {
-    font-size: font-scale(2,$scale-mobile);
-    line-height: get-lineheight(2,$scale-mobile,$base-line-mobile);
+    @include font-and-line(2,$scale-mobile,$base-line-mobile);
     margin-top: $base-line-mobile * 2;
     margin-bottom: $base-line-mobile * 1;
 
     @include mappy-bp(baseline) {
-        font-size: font-scale(2,$scale-mobile-gtmobile);
-        line-height: get-lineheight(2,$scale-mobile-gtmobile,$base-line-gtmobile);
+        @include font-and-line(2,$scale-mobile-gtmobile,$base-line-gtmobile);
         margin-top: $base-line-gtmobile * 1;
         margin-bottom: $base-line-gtmobile * 1;
     }
 }
 
 h3 {
-    font-size: font-scale(1,$scale-mobile);
-    line-height: get-lineheight(1,$scale-mobile,$base-line-mobile);
+    @include font-and-line(1,$scale-mobile,$base-line-mobile);
     margin-top: $base-line-mobile * 1;
     margin-bottom: $base-line-mobile * 1;
 
     @include mappy-bp(baseline) {
-        font-size: font-scale(1,$scale-mobile-gtmobile);
-        line-height: get-lineheight(1,$scale-mobile-gtmobile,$base-line-gtmobile);
+        @include font-and-line(1,$scale-mobile-gtmobile,$base-line-gtmobile);
         margin-top: $base-line-gtmobile * 1;
         margin-bottom: $base-line-gtmobile * 1;
     }
 }
 
 h4 {
-    font-size: $body-font-size;
-    line-height: $base-line-mobile;
+    @include font-and-line(0,$scale-mobile,$base-line-mobile);
     margin-top: $base-line-mobile * 1;
     margin-bottom: $base-line-mobile * 1;
 
     @include mappy-bp(baseline) {
-        font-size: $body-font-size;
-        line-height: $base-line-gtmobile;
+        @include font-and-line(0,$scale-mobile-gtmobile,$base-line-gtmobile);
         margin-top: $base-line-gtmobile * 1;
         margin-bottom: $base-line-gtmobile * 1;
     }
@@ -83,7 +75,6 @@ h4 {
 
 h5,
 h6 {
-    //font-size: font-scale(-1);
     line-height: get-lineheight(-1,$scale-mobile,$base-line-mobile);
     margin-top: $base-line-mobile * 1;
     margin-bottom: $base-line-mobile * 1;
@@ -98,12 +89,9 @@ h6 {
 small,
 code {
     line-height: 1.1rem;
-    
-    //line-height: get-lineheight(font-scale(-1,$scale-mobile),$base-line-mobile - 0.05); //1.25rem - 0.05rem hack
 
     @include mappy-bp(baseline) {
         line-height: 1.2rem;
-    //    line-height: get-lineheight(font-scale(-1,$scale-mobile-gtmobile),$base-line-gtmobile - 0.2); //1.5rem - 0.2rem hack
     }
 }
 
@@ -128,13 +116,12 @@ ul,
 ol,
 pre,
 dl {
-    font-size: $body-font-size;
-    line-height: $base-line-mobile;
+    @include font-and-line(0,$scale-mobile,$base-line-mobile);
     margin-top: $base-line-mobile * 1;
     margin-bottom: $base-line-mobile * 1;
 
     @include mappy-bp(baseline) {
-        line-height: $base-line-gtmobile;
+        @include font-and-line(0,$scale-mobile-gtmobile,$base-line-gtmobile);
         margin-top: $base-line-gtmobile * 1;
         margin-bottom: $base-line-gtmobile * 1;
     }
