@@ -3,12 +3,53 @@
  */
 
 @mixin kitgrid($num: 12,$of: 12,$gap: 0px){
-    @if round($num) != $num {
+    $col: 0;
+
+    @if type-of($num) == 'number' {
+        $col: $num / $of * 100%;
+    }
+    @elseif $num == half {
+        $col: 50%;
+    }
+    @elseif $num == third {
+        $col: 1/3 * 100%;
+    }
+    @else {
         @error "Not a number";
     }
-    width: calc(#{$num}/#{$of} * 1% - #{$gap});
+    
+    width: $col;
+    float: left;
 }
 
-body {
-    @include kitgrid();
+.you-shall-not-pass {
+    @include clearfix();
+}
+
+.foo {
+    @include mappy-bp(baseline){
+        @include kitgrid(half);
+    }
+    & + & {
+        border-left: 1px solid rgba(0,0,0,0.3);
+    }
+}
+.bar {
+    @include mappy-bp(baseline){
+        @include kitgrid(third);
+    }
+    & + & {
+        border-left: 1px solid rgba(0,0,0,0.3);
+    }
+}
+.one-tow {
+    @include mappy-bp(baseline){
+        @include kitgrid(2);
+    }
+}
+.three-four-five-six-seven-eight-nine-ten-eleven-twelve {
+    @include mappy-bp(baseline){
+        @include kitgrid(10);
+    }
+    border-left: 1px solid rgba(0,0,0,0.3);
 }
