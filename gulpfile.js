@@ -1,6 +1,8 @@
 var gulp = require('gulp'),
     concat = require('gulp-concat'),
     cheerio = require('gulp-cheerio'),
+    http = require('http'),
+    livereload = require('gulp-livereload'),
     minify = require('gulp-minify-css'),
     prefix = require('gulp-autoprefixer'),
     rename = require('gulp-rename'),
@@ -83,7 +85,12 @@ gulp.task('min', ['sass','concat'], function(){
 
 });
 
-
+gulp.task('watch', function(){
+    livereload.listen({port:8888});
+    gulp.watch('src/scss/**/*',['sass']);
+    gulp.watch('src/js/**/*',['concat']);
+    gulp.watch('dist/**/*').on('change', livereload.changed);
+});
 
 function errorHandler (error) {
   console.log(error.toString());
