@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fluid Style Guide</title>
+    <link rel="stylesheet" href="../dist/src/css/style.css" />
+    <link rel="stylesheet" href="./css/outbound_trailers/application.css" />
+    <style>
+      html body { padding: 0; }
+      p {
+        margin: 10px 0;
+        font-size: 16px;
+      }
+      code {
+        background-color: #eee;
+        font-family: monospace;
+      }
+      .example {
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #ddd;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+      pre {
+        background-color: #eee;
+        font-family: monospace;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-top: none;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="content" class="container-fluid">
+      <h1>Fluid CSS</h1>
+      
+      <div class="pageSection">
+  <h2 class="sectionHeader sectionHeader-bordered">Button</h2>
+
+  <p>Your standard form button.</p>
+
+  <div>
+    <h3>States</h3>
+
+    <ul>
+      
+        <li><code>:hover</code> - Highlights when hovering.</li>
+      
+        <li><code>:disabled</code> - Dims the button when disabled.</li>
+      
+    </ul>
+  </div>
+
+  <div>
+    <h3>Example</h3>
+
+    <div class="example">
+      @markup
+   <button class="button">This is a button</button>
+   <button class="button--secondary">This is a button</button>
+    </div>
+    <pre>
+@markup
+   &lt;button class="button"&gt;This is a button&lt;/button&gt;
+   &lt;button class="button--secondary"&gt;This is a button&lt;/button&gt;
+    </pre>
+  </div>
+</div>
+<div class="pageSection">
+  <h2 class="sectionHeader sectionHeader-bordered">Basic List</h2>
+
+  <p>A basic list with no styling</p>
+
+  <div>
+    <h3>States</h3>
+
+    <ul>
+      
+    </ul>
+  </div>
+
+  <div>
+    <h3>Example</h3>
+
+    <div class="example">
+      @markup
+ <ul>
+   <li>one</li>
+   <li>two</li>
+   <li>three</li>
+ </ul>
+    </div>
+    <pre>
+@markup
+ &lt;ul&gt;
+   &lt;li&gt;one&lt;/li&gt;
+   &lt;li&gt;two&lt;/li&gt;
+   &lt;li&gt;three&lt;/li&gt;
+ &lt;/ul&gt;
+    </pre>
+  </div>
+</div>
+      
+
+    </div>
+  </body>
+</html>

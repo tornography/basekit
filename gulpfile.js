@@ -1,9 +1,12 @@
 var gulp = require('gulp'),
     concat = require('gulp-concat'),
     cheerio = require('gulp-cheerio'),
+    dss = require('gulp-dss'),
+    exit = require('gulp-exit'),
     http = require('http'),
     livereload = require('gulp-livereload'),
     minify = require('gulp-minify-css'),
+    path = require('path'),
     prefix = require('gulp-autoprefixer'),
     rename = require('gulp-rename'),
     sass = require('gulp-sass'),
@@ -75,6 +78,17 @@ gulp.task('svgfallback', function(){
         .pipe(svgfallback())
         .pipe(gulp.dest('dist/src/img'));
 });
+ 
+gulp.task('dss', function() {
+    gulp.src('src/scss/**/*.{sass,scss}')
+        .pipe(dss({
+          output: 'index.html',
+          templatePath: path.join(__dirname, 'dsstemplates')
+        }))
+        .pipe(gulp.dest('ui-docs/'))
+        .pipe(exit());
+});
+
 
 
 gulp.task('default',['sass','svg','svgfallback','uglify'], function() {
