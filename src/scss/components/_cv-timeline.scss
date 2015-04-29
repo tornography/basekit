@@ -1,0 +1,79 @@
+.cv-timeline {
+    list-style: none;
+    border-left: 2px solid rgba(0,0,0,0.5);
+    padding: 0 0 0 20px;
+    margin: 0 0 0 1em;
+
+    margin-top: $base-line-mobile * 1;
+
+    @include mappy-bp(baseline) {
+        margin-top: $base-line-gtmobile * 1;
+    }
+}
+
+.cv-timeline__section {
+    margin-bottom: $base-line-mobile * 1;
+
+    @include mappy-bp(baseline) {
+        margin-bottom: $base-line-gtmobile * 1;
+    }
+}
+
+.cv-timeline__date {
+    display: inline-block;
+    padding: 0 0.5em;
+    border-radius: 1em;
+    border: 2px solid rgba(0,0,0,0.5);
+    background-color: #FFF;
+    transform: translateX(calc(-20px - 1em));
+}
+
+.cv-timeline__agency{
+    display: block;
+
+    @include font-and-line(1,$scale-mobile,$base-line-mobile);
+    margin-top: $base-line-mobile * 1;
+    margin-bottom: $base-line-mobile * 1;
+
+    @include mappy-bp(baseline) {
+        @include font-and-line(1,$scale-mobile-gtmobile,$base-line-gtmobile);
+        margin-top: $base-line-gtmobile * 1;
+        margin-bottom: $base-line-gtmobile * 1;
+    }
+}
+
+.cv-timeline__job-title {
+    text-transform: uppercase;
+}
+
+.cv-timeline__tag-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    margin-top: $base-line-mobile * 1;
+
+    @include mappy-bp(baseline) {
+        margin-top: $base-line-gtmobile * 1;
+    }
+}
+
+.cv-timeline__tag {
+    display: inline-block;
+    background-color: rgba(0,0,0,0.5);
+    padding: 0 0.5em;
+    color: #FFF;
+
+    @include font-and-line(-1,$scale-mobile,$base-line-mobile);
+    @include mappy-bp(baseline) {
+        @include font-and-line(-1,$scale-mobile-gtmobile,$base-line-gtmobile);
+    }
+}
+
+.cv-timeline__description {
+    margin-top: $base-line-mobile * 1;
+
+    @include mappy-bp(baseline) {
+        margin-top: $base-line-gtmobile * 1;
+    }
+}

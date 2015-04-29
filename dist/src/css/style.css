@@ -9,35 +9,35 @@
   .you-shall-not-pass:after {
     clear: both; }
 
-@media all and (min-width: 30em) {
+@media all and (min-width: 30rem) {
   .foo {
     width: 50%;
     float: left; } }
 .foo + .foo {
   border-left: 1px solid rgba(0, 0, 0, 0.3); }
 
-@media all and (min-width: 30em) {
+@media all and (min-width: 30rem) {
   .bar {
     width: 33.33333%;
     float: left; } }
 .bar + .bar {
   border-left: 1px solid rgba(0, 0, 0, 0.3); }
 
-@media all and (min-width: 30em) {
+@media all and (min-width: 30rem) {
   .one-tow {
     width: 16.66667%;
     float: left; } }
 
 .three-four-five-six-seven-eight-nine-ten-eleven-twelve {
   border-left: 1px solid rgba(0, 0, 0, 0.3); }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     .three-four-five-six-seven-eight-nine-ten-eleven-twelve {
       width: 83.33333%;
       float: left; } }
 
 .h-push-bottom {
   margin-bottom: 1.25rem; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     .h-push-bottom {
       margin-bottom: 1.5rem; } }
 
@@ -380,7 +380,7 @@ html {
 body.debug {
   background-image: linear-gradient(transparent 19px, rgba(255, 0, 0, 0.5) 19px);
   background-size: 20px 20px; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     body.debug {
       background-image: linear-gradient(transparent 23px, rgba(255, 0, 0, 0.5) 23px);
       background-size: 24px 24px; } }
@@ -389,7 +389,7 @@ body {
   color: #666;
   font-size: 1rem;
   line-height: 1.25rem; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     body {
       line-height: 1.5rem; } }
 
@@ -398,7 +398,7 @@ h1 {
   line-height: 2.5rem;
   margin-top: 2.5rem;
   margin-bottom: 1.25rem; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     h1 {
       font-size: 3.375rem;
       line-height: 4.5rem;
@@ -410,7 +410,7 @@ h2 {
   line-height: 2.5rem;
   margin-top: 2.5rem;
   margin-bottom: 1.25rem; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     h2 {
       font-size: 2.25rem;
       line-height: 3rem;
@@ -422,7 +422,7 @@ h3 {
   line-height: 1.25rem;
   margin-top: 1.25rem;
   margin-bottom: 1.25rem; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     h3 {
       font-size: 1.5rem;
       line-height: 1.5rem;
@@ -434,7 +434,7 @@ h4 {
   line-height: 1.25rem;
   margin-top: 1.25rem;
   margin-bottom: 1.25rem; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     h4 {
       font-size: 1rem;
       line-height: 1.5rem;
@@ -445,7 +445,7 @@ h5, h6 {
   line-height: 1.25rem;
   margin-top: 1.25rem;
   margin-bottom: 1.25rem; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     h5, h6 {
       line-height: 1.5rem;
       margin-top: 1.5rem;
@@ -453,19 +453,19 @@ h5, h6 {
 
 small, code {
   line-height: 1.1rem; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     small, code {
       line-height: 1.2rem; } }
 
 pre code {
   line-height: 1.25rem; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     pre code {
       line-height: 1.5rem; } }
 
 small {
   font-size: 0.8rem; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     small {
       font-size: 0.66667rem; } }
 
@@ -474,7 +474,7 @@ p, ul, ol, pre, dl {
   line-height: 1.25rem;
   margin-top: 1.25rem;
   margin-bottom: 1.25rem; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     p, ul, ol, pre, dl {
       font-size: 1rem;
       line-height: 1.5rem;
@@ -483,14 +483,28 @@ p, ul, ol, pre, dl {
 
 blockquote {
   margin: 2.5rem; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     blockquote {
       margin: 3rem; } }
+
+.main-header {
+  margin: 0 10px; }
+
+.main-content {
+  margin: 0 10px; }
+
+.main-footer {
+  margin: 0 10px; }
+
+.main-footer {
+  display: block;
+  padding: 10px;
+  text-align: center; }
 
 .basic-label {
   display: block;
   padding: 0.625rem 0; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     .basic-label {
       padding: 0.75rem 0; } }
 
@@ -503,7 +517,7 @@ blockquote {
   border-color: rgba(0, 0, 0, 0.3);
   line-height: 1.25rem;
   padding: calc(0.625rem - 1px); }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     .basic-input {
       padding: calc(0.75rem - 1px);
       line-height: 1.5rem; } }
@@ -515,7 +529,7 @@ blockquote {
 select.basic-input {
   padding: 0 calc(0.625rem - 1px);
   height: 2.5rem; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     select.basic-input {
       padding: calc(0.75rem + 1px);
       height: 3rem; } }
@@ -527,7 +541,7 @@ select.basic-input {
   border-width: 1px;
   border-color: rgba(0, 0, 0, 0.3);
   padding: calc(0.625rem - 1px); }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     .basic-textarea {
       padding: calc(0.75rem - 1px); } }
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -542,7 +556,7 @@ select.basic-input {
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%); }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     .checkradio__input, .checkradio__input--check, .checkradio__input--radio {
       top: 0.75rem; } }
 
@@ -551,10 +565,21 @@ select.basic-input {
   position: relative;
   padding-left: 20px;
   margin-bottom: 1.25rem; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     .checkradio__label {
       margin-bottom: 1.5rem; } }
 
+/**
+  * @name Button
+  * @description Your standard form button.
+  * 
+  * @state :hover - Highlights when hovering.
+  * @state :disabled - Dims the button when disabled.
+  * 
+  * @markup
+  *   <button class="button">This is a button</button>
+  *   <button class="button--secondary">This is a button</button>
+  */
 .button, .button--secondary {
   text-transform: uppercase;
   border: none;
@@ -566,7 +591,7 @@ select.basic-input {
   margin-bottom: 1.25rem; }
   .button:active, .button--secondary:active {
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.5); }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     .button, .button--secondary {
       padding: 0.75rem;
       display: inline-block;
@@ -575,7 +600,7 @@ select.basic-input {
       margin-bottom: 1.5rem; } }
   textarea + .button, textarea + .button--secondary {
     margin-top: 1.25rem; }
-    @media all and (min-width: 30em) {
+    @media all and (min-width: 30rem) {
       textarea + .button, textarea + .button--secondary {
         margin-top: 1.5rem; } }
 
@@ -588,20 +613,20 @@ select.basic-input {
 .basic-table, .basic-table--border {
   width: 100%;
   margin-bottom: 1.25rem; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     .basic-table, .basic-table--border {
       margin-bottom: 1.5rem; } }
   .basic-table th, .basic-table--border th, .basic-table td, .basic-table--border td {
     text-align: left;
     padding: 0.625rem; }
-    @media all and (min-width: 30em) {
+    @media all and (min-width: 30rem) {
       .basic-table th, .basic-table--border th, .basic-table td, .basic-table--border td {
         padding: 0.75rem; } }
 
 .basic-table--border th, .basic-table--border td {
   padding-top: calc(0.625rem - 1px);
   border-bottom: 1px solid #DDD; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     .basic-table--border th, .basic-table--border td {
       padding-top: calc(0.75rem - 1px); } }
 
@@ -614,7 +639,7 @@ select.basic-input {
   height: 40px;
   width: 40px;
   color: red; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     .icon--twitter, .icon--facebook {
       height: 48px;
       width: 48px; } }
@@ -626,22 +651,33 @@ select.basic-input {
 #facebook path:nth-child(2) {
   fill: green; }
 
+/**
+  * @name Basic List
+  * @description A basic list with no styling
+  * 
+  * @markup
+  * <ul>
+  *   <li>one</li>
+  *   <li>two</li>
+  *   <li>three</li>
+  * </ul>
+  */
 .basic-list__item + .basic-list__item {
   margin-top: 1.25rem; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     .basic-list__item + .basic-list__item {
       margin-top: 1.5rem; } }
 
 .basic-list--small .basic-list__item + .basic-list__item {
   margin-top: 0; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     .basic-list--small .basic-list__item + .basic-list__item {
       margin-top: 0; } }
 
 .main-navi {
   display: block;
   margin-top: 1.25rem; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     .main-navi {
       display: inline-block;
       margin-top: 1.5rem; } }
@@ -661,7 +697,7 @@ select.basic-input {
           flex-grow: 1; }
   .main-navi__item + .main-navi__item {
     border-left: 1px solid rgba(0, 0, 0, 0.3); }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     .main-navi__item {
       -webkit-flex-grow: 0;
           -ms-flex-positive: 0;
@@ -672,20 +708,75 @@ select.basic-input {
   height: 100%;
   padding: calc(1.25rem/2 - 1px);
   text-align: center; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     .main-navi__link {
       padding: calc(1.5rem/2 - 1px); } }
 
-.main-header {
-  margin: 0 10px; }
+.cv-timeline {
+  list-style: none;
+  border-left: 2px solid rgba(0, 0, 0, 0.5);
+  padding: 0 0 0 20px;
+  margin: 0 0 0 1em;
+  margin-top: 1.25rem; }
+  @media all and (min-width: 30rem) {
+    .cv-timeline {
+      margin-top: 1.5rem; } }
 
-.main-content {
-  margin: 0 10px; }
+.cv-timeline__section {
+  margin-bottom: 1.25rem; }
+  @media all and (min-width: 30rem) {
+    .cv-timeline__section {
+      margin-bottom: 1.5rem; } }
 
-.main-footer {
-  margin: 0 10px; }
+.cv-timeline__date {
+  display: inline-block;
+  padding: 0 0.5em;
+  border-radius: 1em;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  background-color: #FFF;
+  -webkit-transform: translateX(calc(-20px - 1em));
+      -ms-transform: translateX(calc(-20px - 1em));
+          transform: translateX(calc(-20px - 1em)); }
 
-.main-footer {
+.cv-timeline__agency {
   display: block;
-  padding: 10px;
-  text-align: center; }
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem; }
+  @media all and (min-width: 30rem) {
+    .cv-timeline__agency {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem; } }
+
+.cv-timeline__job-title {
+  text-transform: uppercase; }
+
+.cv-timeline__tag-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 1.25rem; }
+  @media all and (min-width: 30rem) {
+    .cv-timeline__tag-list {
+      margin-top: 1.5rem; } }
+
+.cv-timeline__tag {
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0 0.5em;
+  color: #FFF;
+  font-size: 0.8rem;
+  line-height: 1.25rem; }
+  @media all and (min-width: 30rem) {
+    .cv-timeline__tag {
+      font-size: 0.66667rem;
+      line-height: 1.5rem; } }
+
+.cv-timeline__description {
+  margin-top: 1.25rem; }
+  @media all and (min-width: 30rem) {
+    .cv-timeline__description {
+      margin-top: 1.5rem; } }
