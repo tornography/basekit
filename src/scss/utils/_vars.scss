@@ -14,6 +14,21 @@ $base-line-gtmobile: 1.5rem;
 $scale-mobile: 1.25;
 $scale-mobile-gtmobile: 1.5;
 
+$rwd-typography: (
+    default: (
+        base-line-height: 1.25rem,
+        type-scale: 1.25,
+        min-width: null
+    ),
+    medium: (
+        base-line-height: 1.5rem,
+        type-scale: 1.5,
+        min-width: 30em
+    )
+);
+
+$rwd-scale-labels: (p, bq, sh, h, hero);
+
 //colors
 $primary-color: #666;
 $secondary-color: #DDD;

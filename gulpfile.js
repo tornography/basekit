@@ -18,7 +18,10 @@ var gulp = require('gulp'),
 gulp.task('sass', function(){
     return gulp
         .src('src/scss/main.scss')
-        .pipe(sass().on('error', errorHandler))
+        .pipe(sass({ 
+          style: 'expanded',
+          sourceComments: 'normal'
+        }).on('error', errorHandler))
         .pipe(prefix({
             browsers: ['last 2 versions','ie 9']
         }))

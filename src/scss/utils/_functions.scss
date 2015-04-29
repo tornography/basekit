@@ -29,3 +29,25 @@
 
     @return $lineheight;
 }
+
+@function rwd-generate-font-size($label, $breakpoint) {
+    $label-position: index($rwd-scale-labels, $label);
+    //$breakpoint-base-font-size: map-get(map-get($rwd-typography, $breakpoint), base-font-size);
+    $breakpoint-base-font-size: 1rem; // wont change on breakpoints
+    $breakpoint-type-scale: map-get(map-get($rwd-typography, $breakpoint), type-scale);
+    $font-size: $breakpoint-base-font-size;
+
+    @for $i from 1 to $label-position {
+        $font-size: $font-size * $breakpoint-type-scale;
+    }
+
+    $line-height: map-get(map-get($rwd-typography, $breakpoint), base-line-height);
+
+    @while $font-size > $line-height {
+        //add line-height to line-height till font-size just fits right in
+        $line-height: $line-height + map-get(map-get($rwd-typography, $breakpoint), base-line-height);
+    }
+
+    $return: join($font-size, $line-height);
+    @return $return;
+}

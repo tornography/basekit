@@ -1,43 +1,50 @@
 /**
  * bastekit grid
  */
+/* line 25, D:/Workspace/gh-basekit/src/scss/utils/_grid.scss */
 .you-shall-not-pass {
   zoom: 1; }
+  /* line 10, D:/Workspace/gh-basekit/src/scss/utils/_mixins.scss */
   .you-shall-not-pass:before, .you-shall-not-pass:after {
     content: "";
     display: table; }
+  /* line 15, D:/Workspace/gh-basekit/src/scss/utils/_mixins.scss */
   .you-shall-not-pass:after {
     clear: both; }
 
-@media all and (min-width: 30em) {
+@media all and (min-width: 30rem) {
   .foo {
     width: 50%;
     float: left; } }
+/* line 33, D:/Workspace/gh-basekit/src/scss/utils/_grid.scss */
 .foo + .foo {
   border-left: 1px solid rgba(0, 0, 0, 0.3); }
 
-@media all and (min-width: 30em) {
+@media all and (min-width: 30rem) {
   .bar {
     width: 33.33333%;
     float: left; } }
+/* line 41, D:/Workspace/gh-basekit/src/scss/utils/_grid.scss */
 .bar + .bar {
   border-left: 1px solid rgba(0, 0, 0, 0.3); }
 
-@media all and (min-width: 30em) {
+@media all and (min-width: 30rem) {
   .one-tow {
     width: 16.66667%;
     float: left; } }
 
+/* line 50, D:/Workspace/gh-basekit/src/scss/utils/_grid.scss */
 .three-four-five-six-seven-eight-nine-ten-eleven-twelve {
   border-left: 1px solid rgba(0, 0, 0, 0.3); }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     .three-four-five-six-seven-eight-nine-ten-eleven-twelve {
       width: 83.33333%;
       float: left; } }
 
+/* line 1, D:/Workspace/gh-basekit/src/scss/utils/_helpers.scss */
 .h-push-bottom {
   margin-bottom: 1.25rem; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     .h-push-bottom {
       margin-bottom: 1.5rem; } }
 
@@ -47,6 +54,7 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
+/* line 9, D:/Workspace/gh-basekit/src/scss/base/_normalize.scss */
 html {
   font-family: sans-serif;
   /* 1 */
@@ -58,6 +66,7 @@ html {
 /**
  * Remove default margin.
  */
+/* line 19, D:/Workspace/gh-basekit/src/scss/base/_normalize.scss */
 body {
   margin: 0; }
 
@@ -69,6 +78,7 @@ body {
  * and Firefox.
  * Correct `block` display not defined for `main` in IE 11.
  */
+/* line 45, D:/Workspace/gh-basekit/src/scss/base/_normalize.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block; }
 
@@ -76,6 +86,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
  * 1. Correct `inline-block` display not defined in IE 8/9.
  * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
  */
+/* line 57, D:/Workspace/gh-basekit/src/scss/base/_normalize.scss */
 audio, canvas, progress, video {
   display: inline-block;
   /* 1 */
@@ -86,6 +97,7 @@ audio, canvas, progress, video {
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
+/* line 67, D:/Workspace/gh-basekit/src/scss/base/_normalize.scss */
 audio:not([controls]) {
   display: none;
   height: 0; }
@@ -94,6 +106,7 @@ audio:not([controls]) {
  * Address `[hidden]` styling not present in IE 8/9/10.
  * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
  */
+/* line 78, D:/Workspace/gh-basekit/src/scss/base/_normalize.scss */
 [hidden], template {
   display: none; }
 
@@ -102,12 +115,14 @@ audio:not([controls]) {
 /**
  * Remove the gray background color from active links in IE 10.
  */
+/* line 89, D:/Workspace/gh-basekit/src/scss/base/_normalize.scss */
 a {
   background-color: transparent; }
 
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
+/* line 98, D:/Workspace/gh-basekit/src/scss/base/_normalize.scss */
 a:active, a:hover {
   outline: 0; }
 
@@ -116,18 +131,21 @@ a:active, a:hover {
 /**
  * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
  */
+/* line 109, D:/Workspace/gh-basekit/src/scss/base/_normalize.scss */
 abbr[title] {
   border-bottom: 1px dotted; }
 
 /**
  * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
  */
+/* line 118, D:/Workspace/gh-basekit/src/scss/base/_normalize.scss */
 b, strong {
   font-weight: bold; }
 
 /**
  * Address styling not present in Safari and Chrome.
  */
+/* line 126, D:/Workspace/gh-basekit/src/scss/base/_normalize.scss */
 dfn {
   font-style: italic; }
 
@@ -135,6 +153,7 @@ dfn {
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari, and Chrome.
  */
+/* line 135, D:/Workspace/gh-basekit/src/scss/base/_normalize.scss */
 h1 {
   font-size: 2em;
   margin: 0.67em 0; }
@@ -142,6 +161,7 @@ h1 {
 /**
  * Address styling not present in IE 8/9.
  */
+/* line 144, D:/Workspace/gh-basekit/src/scss/base/_normalize.scss */
 mark {
   background: #ff0;
   color: #000; }
@@ -149,21 +169,25 @@ mark {
 /**
  * Address inconsistent and variable font size in all browsers.
  */
+/* line 153, D:/Workspace/gh-basekit/src/scss/base/_normalize.scss */
 small {
   font-size: 80%; }
 
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
+/* line 162, D:/Workspace/gh-basekit/src/scss/base/_normalize.scss */
 sub, sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
   vertical-align: baseline; }
 
+/* line 169, D:/Workspace/gh-basekit/src/scss/base/_normalize.scss */
 sup {
   top: -0.5em; }
 
+/* line 173, D:/Workspace/gh-basekit/src/scss/base/_normalize.scss */
 sub {
   bottom: -0.25em; }
 
@@ -172,12 +196,14 @@ sub {
 /**
  * Remove border when inside `a` element in IE 8/9/10.
  */
+/* line 184, D:/Workspace/gh-basekit/src/scss/base/_normalize.scss */
 img {
   border: 0; }
 
 /**
  * Correct overflow not hidden in IE 9/10/11.
  */
+/* line 192, D:/Workspace/gh-basekit/src/scss/base/_normalize.scss */
 svg:not(:root) {
   overflow: hidden; }
 
@@ -186,12 +212,14 @@ svg:not(:root) {
 /**
  * Address margin not present in IE 8/9 and Safari.
  */
+/* line 203, D:/Workspace/gh-basekit/src/scss/base/_normalize.scss */
 figure {
   margin: 1em 40px; }
 
 /**
  * Address differences between Firefox and other browsers.
  */
+/* line 211, D:/Workspace/gh-basekit/src/scss/base/_normalize.scss */
 hr {
   box-sizing: content-box;
   height: 0; }
@@ -199,12 +227,14 @@ hr {
 /**
  * Contain overflow in all browsers.
  */
+/* line 221, D:/Workspace/gh-basekit/src/scss/base/_normalize.scss */
 pre {
   overflow: auto; }
 
 /**
  * Address odd `em`-unit font size rendering in all browsers.
  */
+/* line 232, D:/Workspace/gh-basekit/src/scss/base/_normalize.scss */
 code, kbd, pre, samp {
   font-family: monospace, monospace;
   font-size: 1em; }
@@ -221,6 +251,7 @@ code, kbd, pre, samp {
  * 2. Correct font properties not being inherited.
  * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
  */
+/* line 256, D:/Workspace/gh-basekit/src/scss/base/_normalize.scss */
 button, input, optgroup, select, textarea {
   color: inherit;
   /* 1 */
@@ -232,6 +263,7 @@ button, input, optgroup, select, textarea {
 /**
  * Address `overflow` set to `hidden` in IE 8/9/10/11.
  */
+/* line 266, D:/Workspace/gh-basekit/src/scss/base/_normalize.scss */
 button {
   overflow: visible; }
 
@@ -241,6 +273,7 @@ button {
  * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
  * Correct `select` style inheritance in Firefox.
  */
+/* line 278, D:/Workspace/gh-basekit/src/scss/base/_normalize.scss */
 button, select {
   text-transform: none; }
 
@@ -251,6 +284,7 @@ button, select {
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  */
+/* line 293, D:/Workspace/gh-basekit/src/scss/base/_normalize.scss */
 button, html input[type="button"], input[type="reset"], input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
@@ -260,12 +294,14 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
+/* line 303, D:/Workspace/gh-basekit/src/scss/base/_normalize.scss */
 button[disabled], html input[disabled] {
   cursor: default; }
 
 /**
  * Remove inner padding and border in Firefox 4+.
  */
+/* line 312, D:/Workspace/gh-basekit/src/scss/base/_normalize.scss */
 button::-moz-focus-inner, input::-moz-focus-inner {
   border: 0;
   padding: 0; }
@@ -274,6 +310,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
+/* line 322, D:/Workspace/gh-basekit/src/scss/base/_normalize.scss */
 input {
   line-height: normal; }
 
@@ -284,6 +321,7 @@ input {
  * 1. Address box sizing set to `content-box` in IE 8/9/10.
  * 2. Remove excess padding in IE 8/9/10.
  */
+/* line 335, D:/Workspace/gh-basekit/src/scss/base/_normalize.scss */
 input[type="checkbox"], input[type="radio"] {
   box-sizing: border-box;
   /* 1 */
@@ -295,6 +333,7 @@ input[type="checkbox"], input[type="radio"] {
  * `font-size` values of the `input`, it causes the cursor style of the
  * decrement button to change from `default` to `text`.
  */
+/* line 347, D:/Workspace/gh-basekit/src/scss/base/_normalize.scss */
 input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
   height: auto; }
 
@@ -303,6 +342,7 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
  * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
  *    (include `-moz` to future-proof).
  */
+/* line 357, D:/Workspace/gh-basekit/src/scss/base/_normalize.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -314,12 +354,14 @@ input[type="search"] {
  * Safari (but not Chrome) clips the cancel button when the search input has
  * padding (and `textfield` appearance).
  */
+/* line 371, D:/Workspace/gh-basekit/src/scss/base/_normalize.scss */
 input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
 /**
  * Define consistent border, margin, and padding.
  */
+/* line 379, D:/Workspace/gh-basekit/src/scss/base/_normalize.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
@@ -329,6 +371,7 @@ fieldset {
  * 1. Correct `color` not being inherited in IE 8/9/10/11.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
+/* line 390, D:/Workspace/gh-basekit/src/scss/base/_normalize.scss */
 legend {
   border: 0;
   /* 1 */
@@ -338,6 +381,7 @@ legend {
 /**
  * Remove default vertical scrollbar in IE 8/9/10/11.
  */
+/* line 399, D:/Workspace/gh-basekit/src/scss/base/_normalize.scss */
 textarea {
   overflow: auto; }
 
@@ -345,6 +389,7 @@ textarea {
  * Don't inherit the `font-weight` (applied by a rule above).
  * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
  */
+/* line 408, D:/Workspace/gh-basekit/src/scss/base/_normalize.scss */
 optgroup {
   font-weight: bold; }
 
@@ -353,147 +398,190 @@ optgroup {
 /**
  * Remove most spacing between table cells.
  */
+/* line 419, D:/Workspace/gh-basekit/src/scss/base/_normalize.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+/* line 425, D:/Workspace/gh-basekit/src/scss/base/_normalize.scss */
 td, th {
   padding: 0; }
 
 /* apply a natural box layout model to all elements, but allowing components to change */
+/* line 2, D:/Workspace/gh-basekit/src/scss/base/_reset.scss */
 html {
   box-sizing: border-box; }
 
+/* line 5, D:/Workspace/gh-basekit/src/scss/base/_reset.scss */
 *, *:before, *:after {
   box-sizing: inherit; }
 
+/* line 8, D:/Workspace/gh-basekit/src/scss/base/_reset.scss */
 body {
   background-color: #FFF; }
 
+/* line 12, D:/Workspace/gh-basekit/src/scss/base/_reset.scss */
 pre code {
   display: block; }
 
+/* line 1, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
 html {
   font-size: 16px; }
 
 /* debug */
+/* line 6, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
 body.debug {
   background-image: linear-gradient(transparent 19px, rgba(255, 0, 0, 0.5) 19px);
   background-size: 20px 20px; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     body.debug {
       background-image: linear-gradient(transparent 23px, rgba(255, 0, 0, 0.5) 23px);
       background-size: 24px 24px; } }
 
+/* line 19, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
 body {
-  color: #666;
   font-size: 1rem;
   line-height: 1.25rem; }
-  @media all and (min-width: 30em) {
+  @media screen and (min-width: 30em) {
     body {
+      font-size: 1rem;
       line-height: 1.5rem; } }
 
+/* line 40, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
+body {
+  color: #666; }
+
+/* line 45, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
 h1 {
   font-size: 1.95313rem;
   line-height: 2.5rem;
   margin-top: 2.5rem;
   margin-bottom: 1.25rem; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     h1 {
       font-size: 3.375rem;
       line-height: 4.5rem;
       margin-top: 1.5rem;
       margin-bottom: 1.5rem; } }
 
+/* line 57, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
 h2 {
   font-size: 1.5625rem;
   line-height: 2.5rem;
   margin-top: 2.5rem;
   margin-bottom: 1.25rem; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     h2 {
       font-size: 2.25rem;
       line-height: 3rem;
       margin-top: 1.5rem;
       margin-bottom: 1.5rem; } }
 
+/* line 69, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
 h3 {
   font-size: 1.25rem;
   line-height: 1.25rem;
   margin-top: 1.25rem;
   margin-bottom: 1.25rem; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     h3 {
       font-size: 1.5rem;
       line-height: 1.5rem;
       margin-top: 1.5rem;
       margin-bottom: 1.5rem; } }
 
+/* line 81, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
 h4 {
   font-size: 1rem;
   line-height: 1.25rem;
   margin-top: 1.25rem;
   margin-bottom: 1.25rem; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     h4 {
       font-size: 1rem;
       line-height: 1.5rem;
       margin-top: 1.5rem;
       margin-bottom: 1.5rem; } }
 
+/* line 94, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
 h5, h6 {
   line-height: 1.25rem;
   margin-top: 1.25rem;
   margin-bottom: 1.25rem; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     h5, h6 {
       line-height: 1.5rem;
       margin-top: 1.5rem;
       margin-bottom: 1.5rem; } }
 
+/* line 107, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
 small, code {
   line-height: 1.1rem; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     small, code {
       line-height: 1.2rem; } }
 
+/* line 115, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
 pre code {
   line-height: 1.25rem; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     pre code {
       line-height: 1.5rem; } }
 
+/* line 123, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
 small {
   font-size: 0.8rem; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     small {
       font-size: 0.66667rem; } }
 
+/* line 135, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
 p, ul, ol, pre, dl {
   font-size: 1rem;
   line-height: 1.25rem;
   margin-top: 1.25rem;
   margin-bottom: 1.25rem; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     p, ul, ol, pre, dl {
       font-size: 1rem;
       line-height: 1.5rem;
       margin-top: 1.5rem;
       margin-bottom: 1.5rem; } }
 
+/* line 147, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
 blockquote {
   margin: 2.5rem; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     blockquote {
       margin: 3rem; } }
 
+/* line 1, D:/Workspace/gh-basekit/src/scss/layout/_pagegrid.scss */
+.main-header {
+  margin: 0 10px; }
+
+/* line 5, D:/Workspace/gh-basekit/src/scss/layout/_pagegrid.scss */
+.main-content {
+  margin: 0 10px; }
+
+/* line 9, D:/Workspace/gh-basekit/src/scss/layout/_pagegrid.scss */
+.main-footer {
+  margin: 0 10px; }
+
+/* line 1, D:/Workspace/gh-basekit/src/scss/layout/_footer.scss */
+.main-footer {
+  display: block;
+  padding: 10px;
+  text-align: center; }
+
+/* line 9, D:/Workspace/gh-basekit/src/scss/components/_inputs.scss */
 .basic-label {
   display: block;
   padding: 0.625rem 0; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     .basic-label {
       padding: 0.75rem 0; } }
 
+/* line 17, D:/Workspace/gh-basekit/src/scss/components/_inputs.scss */
 .basic-input {
   display: block;
   width: 100%;
@@ -503,7 +591,7 @@ blockquote {
   border-color: rgba(0, 0, 0, 0.3);
   line-height: 1.25rem;
   padding: calc(0.625rem - 1px); }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     .basic-input {
       padding: calc(0.75rem - 1px);
       line-height: 1.5rem; } }
@@ -512,14 +600,16 @@ blockquote {
       padding-top: calc(0.75rem + 1px * 2);
       padding-bottom: calc(0.75rem + 1px * 2); } }
 
+/* line 39, D:/Workspace/gh-basekit/src/scss/components/_inputs.scss */
 select.basic-input {
   padding: 0 calc(0.625rem - 1px);
   height: 2.5rem; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     select.basic-input {
       padding: calc(0.75rem + 1px);
       height: 3rem; } }
 
+/* line 49, D:/Workspace/gh-basekit/src/scss/components/_inputs.scss */
 .basic-textarea {
   display: block;
   width: 100%;
@@ -527,7 +617,7 @@ select.basic-input {
   border-width: 1px;
   border-color: rgba(0, 0, 0, 0.3);
   padding: calc(0.625rem - 1px); }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     .basic-textarea {
       padding: calc(0.75rem - 1px); } }
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -535,6 +625,7 @@ select.basic-input {
       padding-top: calc(0.75rem + 1px * 2);
       padding-bottom: calc(0.75rem + 1px * 7); } }
 
+/* line 72, D:/Workspace/gh-basekit/src/scss/components/_inputs.scss */
 .checkradio__input, .checkradio__input--check, .checkradio__input--radio {
   position: absolute;
   left: 0;
@@ -542,19 +633,32 @@ select.basic-input {
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%); }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     .checkradio__input, .checkradio__input--check, .checkradio__input--radio {
       top: 0.75rem; } }
 
+/* line 83, D:/Workspace/gh-basekit/src/scss/components/_inputs.scss */
 .checkradio__label {
   display: block;
   position: relative;
   padding-left: 20px;
   margin-bottom: 1.25rem; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     .checkradio__label {
       margin-bottom: 1.5rem; } }
 
+/**
+  * @name Button
+  * @description Your standard form button.
+  * 
+  * @state :hover - Highlights when hovering.
+  * @state :disabled - Dims the button when disabled.
+  * 
+  * @markup
+  *   <button class="button">This is a button</button>
+  *   <button class="button--secondary">This is a button</button>
+  */
+/* line 16, D:/Workspace/gh-basekit/src/scss/components/_buttons.scss */
 .button, .button--secondary {
   text-transform: uppercase;
   border: none;
@@ -564,88 +668,115 @@ select.basic-input {
   display: block;
   width: 100%;
   margin-bottom: 1.25rem; }
+  /* line 26, D:/Workspace/gh-basekit/src/scss/components/_buttons.scss */
   .button:active, .button--secondary:active {
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.5); }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     .button, .button--secondary {
       padding: 0.75rem;
       display: inline-block;
       vertical-align: middle;
       width: auto;
       margin-bottom: 1.5rem; } }
+  /* line 38, D:/Workspace/gh-basekit/src/scss/components/_buttons.scss */
   textarea + .button, textarea + .button--secondary {
     margin-top: 1.25rem; }
-    @media all and (min-width: 30em) {
+    @media all and (min-width: 30rem) {
       textarea + .button, textarea + .button--secondary {
         margin-top: 1.5rem; } }
 
+/* line 47, D:/Workspace/gh-basekit/src/scss/components/_buttons.scss */
 .button {
   background-color: #DDD; }
+  /* line 51, D:/Workspace/gh-basekit/src/scss/components/_buttons.scss */
   .button--secondary {
     background-color: #666;
     color: white; }
 
+/* line 1, D:/Workspace/gh-basekit/src/scss/components/_tables.scss */
 .basic-table, .basic-table--border {
   width: 100%;
   margin-bottom: 1.25rem; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     .basic-table, .basic-table--border {
       margin-bottom: 1.5rem; } }
+  /* line 9, D:/Workspace/gh-basekit/src/scss/components/_tables.scss */
   .basic-table th, .basic-table--border th, .basic-table td, .basic-table--border td {
     text-align: left;
     padding: 0.625rem; }
-    @media all and (min-width: 30em) {
+    @media all and (min-width: 30rem) {
       .basic-table th, .basic-table--border th, .basic-table td, .basic-table--border td {
         padding: 0.75rem; } }
 
+/* line 24, D:/Workspace/gh-basekit/src/scss/components/_tables.scss */
 .basic-table--border th, .basic-table--border td {
   padding-top: calc(0.625rem - 1px);
   border-bottom: 1px solid #DDD; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     .basic-table--border th, .basic-table--border td {
       padding-top: calc(0.75rem - 1px); } }
 
+/* line 1, D:/Workspace/gh-basekit/src/scss/components/_icons.scss */
 #SvgContainer {
   display: none; }
 
+/* line 5, D:/Workspace/gh-basekit/src/scss/components/_icons.scss */
 .icon--twitter, .icon--facebook {
   display: inline-block;
   vertical-align: middle;
   height: 40px;
   width: 40px;
   color: red; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     .icon--twitter, .icon--facebook {
       height: 48px;
       width: 48px; } }
+  /* line 18, D:/Workspace/gh-basekit/src/scss/components/_icons.scss */
   .no-svg .icon--twitter use, .no-svg .icon--facebook use {
     display: none; }
 
+/* line 29, D:/Workspace/gh-basekit/src/scss/components/_icons.scss */
 #facebook path:nth-child(1) {
   fill: blue; }
+/* line 33, D:/Workspace/gh-basekit/src/scss/components/_icons.scss */
 #facebook path:nth-child(2) {
   fill: green; }
 
+/**
+  * @name Basic List
+  * @description A basic list with no styling
+  * 
+  * @markup
+  * <ul>
+  *   <li>one</li>
+  *   <li>two</li>
+  *   <li>three</li>
+  * </ul>
+  */
+/* line 16, D:/Workspace/gh-basekit/src/scss/components/_lists.scss */
 .basic-list__item + .basic-list__item {
   margin-top: 1.25rem; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     .basic-list__item + .basic-list__item {
       margin-top: 1.5rem; } }
 
+/* line 25, D:/Workspace/gh-basekit/src/scss/components/_lists.scss */
 .basic-list--small .basic-list__item + .basic-list__item {
   margin-top: 0; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     .basic-list--small .basic-list__item + .basic-list__item {
       margin-top: 0; } }
 
+/* line 1, D:/Workspace/gh-basekit/src/scss/components/_mainnavi.scss */
 .main-navi {
   display: block;
   margin-top: 1.25rem; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     .main-navi {
       display: inline-block;
       margin-top: 1.5rem; } }
 
+/* line 11, D:/Workspace/gh-basekit/src/scss/components/_mainnavi.scss */
 .main-navi__list {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -655,37 +786,26 @@ select.basic-input {
   padding: 0;
   border: 1px solid rgba(0, 0, 0, 0.3); }
 
+/* line 24, D:/Workspace/gh-basekit/src/scss/components/_mainnavi.scss */
 .main-navi__item {
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1; }
+  /* line 27, D:/Workspace/gh-basekit/src/scss/components/_mainnavi.scss */
   .main-navi__item + .main-navi__item {
     border-left: 1px solid rgba(0, 0, 0, 0.3); }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     .main-navi__item {
       -webkit-flex-grow: 0;
           -ms-flex-positive: 0;
               flex-grow: 0; } }
 
+/* line 36, D:/Workspace/gh-basekit/src/scss/components/_mainnavi.scss */
 .main-navi__link {
   display: block;
   height: 100%;
   padding: calc(1.25rem/2 - 1px);
   text-align: center; }
-  @media all and (min-width: 30em) {
+  @media all and (min-width: 30rem) {
     .main-navi__link {
       padding: calc(1.5rem/2 - 1px); } }
-
-.main-header {
-  margin: 0 10px; }
-
-.main-content {
-  margin: 0 10px; }
-
-.main-footer {
-  margin: 0 10px; }
-
-.main-footer {
-  display: block;
-  padding: 10px;
-  text-align: center; }
