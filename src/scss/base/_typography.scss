@@ -13,15 +13,33 @@ body.debug {
     }
 }
 
-body {
-    color: $primary-color;
 
-    font-size: $body-font-size;
-    line-height: $base-line-mobile;
+// loop to generate font %placeholders
+@each $label in $rwd-scale-labels {
+    %#{$label} {
+        @each $breakpoint, $data in $rwd-typography {
+            $generated-values: rwd-generate-font-size($label, $breakpoint);
+            $font-size: nth($generated-values, 1);
+            $line-height: nth($generated-values, 2);
 
-    @include mappy-bp(baseline) {
-        line-height: $base-line-gtmobile;
+            @if map-get($data, min-width) != null { //CHECK != syntax
+                @media screen and (min-width: map-get($data, min-width)) {
+                    font-size: $font-size;
+                    line-height: $line-height;
+                }
+            }
+            @else {
+                font-size: $font-size;
+                line-height: $line-height;
+            }
+        }
     }
+}
+
+
+body {
+    @extend %p;
+    color: $primary-color;
 }
 
 h1 {
