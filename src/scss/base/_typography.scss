@@ -1,3 +1,59 @@
+// Typography
+// 
+// Font sizes, styling and used webfonts.
+// 
+// Styleguide 2
+
+// Headlines
+// 
+// Markup:
+// <h1>Headline Level 1</h1>
+// <h2>Headline Level 2</h2>
+// <h3>Headline Level 3</h3>
+// <h4>Headline Level 4</h4>
+// <h5>Headline Level 5</h5>
+// <h6>Headline Level 6</h6>
+// 
+// Styleguide 2.1
+
+// Paragraphs
+// 
+// Markup:
+// <p>Paragraph (body): Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>  
+//
+// Styleguide 2.2
+
+// Code
+// 
+// Markup:
+// <pre><code>var foo = array("bar","baz");</code></pre>
+// 
+// Styleguide 2.3
+
+// Inline text
+// 
+// Markup:
+// <a href="#!">This is a text link</a>.<br>
+// <strong>Strong is used to indicate strong importance.</strong><br>
+// <em>This text has added emphasis.</em><br>
+// The <b>b element</b> is stylistically different text from normal text, without any special importance.<br>
+// The <i>i element</i> is text that is offset from the normal text.<br>
+// The <u>u element</u> is text with an unarticulated, though explicitly rendered, non-textual annotation.<br>
+// <del>This text is deleted</del> and <ins>This text is inserted</ins>.<br>
+// <s>This text has a strikethrough</s>.<br>
+// Superscript<sup>®</sup>.<br>
+// Subscript for things like H<sub>2</sub>O.<br>
+// <small>This small text is small for for fine print, etc.</small><br>
+// Abbreviation: <abbr title="HyperText Markup Language">HTML</abbr><br>
+// <q cite="https://developer.mozilla.org/en-US/docs/HTML/Element/q">This text is a short inline quotation.</q><br>
+// <cite>This is a citation.</cite><br>
+// The <dfn>dfn element</dfn> indicates a definition.<br>
+// The <mark>mark element</mark> indicates a highlight.<br>
+// The <var>variable element</var>, such as <var>x</var> = <var>y</var>.<br>
+// The time element: <time datetime="2013-04-06T12:32+00:00">2 weeks ago</time>
+// 
+// Styleguide 2.4
+
 html {
     font-size: $base-font-size;
 }
@@ -40,6 +96,8 @@ body {
     @extend %p;
     color: get-color("text");
 }
+
+
 
 h1 {
     @extend %h;

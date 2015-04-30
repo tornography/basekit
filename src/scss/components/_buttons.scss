@@ -1,15 +1,22 @@
-/**
-  * @name Button
-  * @description Your standard form button.
-  * 
-  * @state :hover - Highlights when hovering.
-  * @state :disabled - Dims the button when disabled.
-  * 
-  * @markup
-  *   <button class="button">This is a button</button>
-  *   <button class="button--secondary">This is a button</button>
-  */ 
+// Buttons
+// 
+// General button usage
+//
+// Markup:  
+// <button class="button {$modifiers}">Button</button>
+// <a href="#" class="button {$modifiers}">Link</a>
+// <input type="button" value="input[type='button']" class="button {$modifiers}">
+//
+// :hover    - Hovered button  
+// :disabled - Button is disabled  
+// .button--primary - Primary button for main action  
+// .button--secondary - Secondary button
+//
+// Styleguide 1
 
+$default-button-color: get-color("background");
+$hover-button-color: get-color("background","light");
+$disabled-button-color: get-color("background","dark");
 $primary-button-color: get-color("primary");
 $secondary-button-color: get-color("secondary");
 $button-text-dark: get-color("text");
@@ -31,6 +38,22 @@ $shdow-color: get-color("shadow");
         box-shadow: 0 0 1px $shdow-color;
     }
 
+    &:active,
+    &:visited,
+    &:active,
+    &:hover {
+      color: $button-text-light;
+    }
+
+    &:hover {
+        background-color: $hover-button-color;
+    }
+
+    &:disabled {
+        color: $button-text-dark;
+        background-color: $disabled-button-color;
+    }
+
     @include mappy-bp(baseline) {
         padding: ($base-line-gtmobile / 2);
         display: inline-block;
@@ -50,7 +73,11 @@ $shdow-color: get-color("shadow");
 
 .button {
     @extend %button;
-    background-color: $primary-button-color;
+    background-color: $default-button-color;
+
+    &--primary {
+        background-color: $primary-button-color;
+    }
 
     &--secondary {
         background-color: $secondary-button-color;

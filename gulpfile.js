@@ -4,6 +4,7 @@ var gulp = require('gulp'),
     dss = require('gulp-dss'),
     exit = require('gulp-exit'),
     http = require('http'),
+    kss = require('gulp-kss'),
     livereload = require('gulp-livereload'),
     minify = require('gulp-minify-css'),
     path = require('path'),
@@ -90,6 +91,27 @@ gulp.task('dss', function() {
         }))
         .pipe(gulp.dest('ui-docs/'))
         .pipe(exit());
+});
+
+gulp.task('kss', function() {
+    gulp.src('src/scss/**/*.{sass,scss}')
+        .pipe(kss({
+            overview: 'styleguide/styleguide.md'
+        }))
+        .pipe(gulp.dest('styleguide/'));
+
+    gulp.src(['src/scss/main.scss','styleguide/kss.scss'])
+        .pipe(concat('styleguide.scss'))
+        .pipe(sass({ 
+          style: 'expanded',
+          sourceComments: 'normal'
+        }).on('error', errorHandler))
+        .pipe(prefix({
+            browsers: ['last 2 versions','ie 9']
+        }))
+        .pipe(rename('public/style.css'))
+        .pipe(gulp.dest('styleguide/'));
+
 });
 
 

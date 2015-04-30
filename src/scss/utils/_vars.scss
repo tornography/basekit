@@ -6,13 +6,10 @@ $breakpoints: (
 );
 
 //typography
-$scale-mobile-query: "screen and (min-width: 30em)";
 $base-font-size: 16px; //html
 $body-font-size: 1rem; //body
 
-//$scale-mobile: 1.25;
-//$scale-mobile-gtmobile: 1.5;
-
+$rwd-scale-labels: (p, bq, sh, h, hero);
 $rwd-typography: (
     default: (
         base-line-height: 1.25rem,
@@ -28,7 +25,7 @@ $rwd-typography: (
 
 $base-line-mobile: map-get(map-get($rwd-typography, "default"), "base-line-height");
 $base-line-gtmobile: map-get(map-get($rwd-typography, "medium"), "base-line-height");
-$rwd-scale-labels: (p, bq, sh, h, hero);
+
 
 //colors
 $colors: (
@@ -57,6 +54,3 @@ $colors: (
         base: rgba(0,0,0,0.5)
     )
 );
-
-$primary-color: get-color("primary");
-$secondary-color: get-color("secondary");

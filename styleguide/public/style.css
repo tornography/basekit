@@ -820,3 +820,21 @@ select.basic-input {
   @media all and (min-width: 30rem) {
     .main-navi__link {
       padding: calc(1.5rem/2 - 1px); } }
+
+/* line 10, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+.kss-mod-desc-group p {
+  margin: 0; }
+
+/* line 15, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+.kss-markup {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 10px; }
+  /* line 20, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+  .kss-markup pre {
+    margin: 0;
+    line-height: 1.25rem; }
+
+/* line 26, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+.kss-mod-desc {
+  background-color: rgba(0, 0, 0, 0.1); }
