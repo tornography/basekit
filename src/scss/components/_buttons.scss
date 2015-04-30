@@ -53,7 +53,6 @@ $shdow-color: get-color("shadow");
     background-color: $primary-button-color;
 
     &--secondary {
-        @extend %button;
         background-color: $secondary-button-color;
     }
 }

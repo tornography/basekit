@@ -92,12 +92,12 @@ h4 {
 
 h5,
 h6 {
-    @extend %p;
-
+    font-size: $base-font-size / map-get(map-get($rwd-typography, "default"), "type-scale");
     margin-top: $base-line-mobile * 1;
     margin-bottom: $base-line-mobile * 1;
 
     @include mappy-bp(baseline) {
+        font-size: $base-font-size / map-get(map-get($rwd-typography, "medium"), "type-scale");
         margin-top: $base-line-gtmobile * 1;
         margin-bottom: $base-line-gtmobile * 1;
     }
@@ -122,10 +122,10 @@ pre code {
 }
 
 small {
-    font-size: map-get(map-get($rwd-typography, "default"), "base-line-height") / map-get(map-get($rwd-typography, "default"), "type-scale");
+    font-size: $base-font-size / map-get(map-get($rwd-typography, "default"), "type-scale");
 
     @include mappy-bp(baseline) {
-        font-size: map-get(map-get($rwd-typography, "medium"), "base-line-height") / map-get(map-get($rwd-typography, "medium"), "type-scale");
+        font-size: $base-font-size / map-get(map-get($rwd-typography, "medium"), "type-scale");
     }
 }
 

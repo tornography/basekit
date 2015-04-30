@@ -474,11 +474,11 @@ body.debug {
       background-size: 24px 24px; } }
 
 /* line 19, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
-body, h4, h5, h6 {
+body, h4 {
   font-size: 1rem;
   line-height: 1.25rem; }
   @media screen and (min-width: 30em) {
-    body, h4, h5, h6 {
+    body, h4 {
       font-size: 1rem;
       line-height: 1.5rem; } }
 
@@ -551,10 +551,12 @@ h4 {
 
 /* line 94, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
 h5, h6 {
+  font-size: 12.8px;
   margin-top: 1.25rem;
   margin-bottom: 1.25rem; }
   @media all and (min-width: 30rem) {
     h5, h6 {
+      font-size: 10.66667px;
       margin-top: 1.5rem;
       margin-bottom: 1.5rem; } }
 
@@ -574,10 +576,10 @@ pre code {
 
 /* line 124, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
 small {
-  font-size: 1rem; }
+  font-size: 12.8px; }
   @media all and (min-width: 30rem) {
     small {
-      font-size: 1rem; } }
+      font-size: 10.66667px; } }
 
 /* line 136, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
 p, ul, ol, pre, dl {
@@ -699,7 +701,7 @@ select.basic-input {
   *   <button class="button--secondary">This is a button</button>
   */
 /* line 19, D:/Workspace/gh-basekit/src/scss/components/_buttons.scss */
-.button, .button--secondary {
+.button {
   text-transform: uppercase;
   border: none;
   border-radius: 3px;
@@ -710,20 +712,20 @@ select.basic-input {
   margin-bottom: 1.25rem;
   color: white; }
   /* line 30, D:/Workspace/gh-basekit/src/scss/components/_buttons.scss */
-  .button:active, .button--secondary:active {
+  .button:active {
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.5); }
   @media all and (min-width: 30rem) {
-    .button, .button--secondary {
+    .button {
       padding: 0.75rem;
       display: inline-block;
       vertical-align: middle;
       width: auto;
       margin-bottom: 1.5rem; } }
   /* line 42, D:/Workspace/gh-basekit/src/scss/components/_buttons.scss */
-  textarea + .button, textarea + .button--secondary {
+  textarea + .button {
     margin-top: 1.25rem; }
     @media all and (min-width: 30rem) {
-      textarea + .button, textarea + .button--secondary {
+      textarea + .button {
         margin-top: 1.5rem; } }
 
 /* line 51, D:/Workspace/gh-basekit/src/scss/components/_buttons.scss */
