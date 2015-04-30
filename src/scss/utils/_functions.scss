@@ -1,3 +1,4 @@
+/*
 // multiply with scalefactor
 @function font-scale($times:0, $intscale:$scale-mobile){
     $fontsize: $body-font-size;
@@ -29,7 +30,10 @@
 
     @return $lineheight;
 }
+*/
 
+
+/* generating font-size and corresponting line-height */
 @function rwd-generate-font-size($label, $breakpoint) {
     $label-position: index($rwd-scale-labels, $label);
     //$breakpoint-base-font-size: map-get(map-get($rwd-typography, $breakpoint), base-font-size);
@@ -49,5 +53,26 @@
     }
 
     $return: join($font-size, $line-height);
+    @return $return;
+}
+
+/* get color from map */
+@function get-color($key: "primary", $version: "base") {
+    $return: #F00;
+
+    @if (map-has-key($colors, $key)) {
+        $color: map-get($colors, $key);
+
+        @if (map-has-key($color, $version)) {
+            $return: map-get($color, $version);
+        }
+        @else {
+            @warn "Die Farbevariante '#{$version}' (der Farbe '#{$key}') ist nicht definiert.";
+        }
+    }
+    @else {
+        @warn "Die Farbe '#{$key}' ist nicht definiert.";
+    }
+
     @return $return;
 }

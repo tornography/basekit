@@ -10,21 +10,25 @@
   *   <button class="button--secondary">This is a button</button>
   */ 
 
-$primary-button-color: $secondary-color;
-$secondary-button-color: $primary-color;
+$primary-button-color: get-color("primary");
+$secondary-button-color: get-color("secondary");
+$button-text-dark: get-color("text");
+$button-text-light: get-color("text","white");
+$shdow-color: get-color("shadow");
 
 %button {
     text-transform: uppercase;
     border: none;
     border-radius: $input-border-radius;
-    box-shadow: 0 2px 2px rgba(0,0,0, 0.5);
+    box-shadow: 0 2px 2px $shdow-color;
     padding: ($base-line-mobile / 2);
     display: block;
     width: 100%;
     margin-bottom: $base-line-mobile;
+    color: $button-text-light;
 
     &:active {
-        box-shadow: 0 0 1px rgba(0,0,0, 0.5);
+        box-shadow: 0 0 1px $shdow-color;
     }
 
     @include mappy-bp(baseline) {
@@ -51,6 +55,5 @@ $secondary-button-color: $primary-color;
     &--secondary {
         @extend %button;
         background-color: $secondary-button-color;
-        color: white;
     }
 }

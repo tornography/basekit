@@ -9,10 +9,9 @@ $breakpoints: (
 $scale-mobile-query: "screen and (min-width: 30em)";
 $base-font-size: 16px; //html
 $body-font-size: 1rem; //body
-$base-line-mobile: 1.25rem;
-$base-line-gtmobile: 1.5rem;
-$scale-mobile: 1.25;
-$scale-mobile-gtmobile: 1.5;
+
+//$scale-mobile: 1.25;
+//$scale-mobile-gtmobile: 1.5;
 
 $rwd-typography: (
     default: (
@@ -27,16 +26,37 @@ $rwd-typography: (
     )
 );
 
+$base-line-mobile: map-get(map-get($rwd-typography, "default"), "base-line-height");
+$base-line-gtmobile: map-get(map-get($rwd-typography, "medium"), "base-line-height");
 $rwd-scale-labels: (p, bq, sh, h, hero);
 
 //colors
 $colors: (
     primary: (
-        
+        base: rgb(130,40,60), //#82283C
+        light: mix(white, rgb(130,40,60), 10%),
+        dark: mix(black, rgb(130,40,60), 10%)
     ),
     secondary: (
-
+        base: rgb(124,102,85), //#7C6655
+        light: mix(white, rgb(130,40,60), 10%),
+        dark: mix(black, rgb(130,40,60), 10%)
+    ),
+    text: (
+        base: rgb(88,88,88),
+        light: mix(white, rgb(88,88,88), 10%),
+        dark: mix(black, rgb(88,88,88), 10%),
+        'white': rgb(255,255,255)
+    ),
+    background: (
+        base: mix(white, black, 50%),
+        light: mix(white, black, 75%),
+        dark: mix(white, black, 25%)
+    ),
+    shadow: (
+        base: rgba(0,0,0,0.5)
     )
-)
-$primary-color: #666;
-$secondary-color: #DDD;
+);
+
+$primary-color: get-color("primary");
+$secondary-color: get-color("secondary");

@@ -1,3 +1,38 @@
+/*
+// multiply with scalefactor
+@function font-scale($times:0, $intscale:$scale-mobile){
+    $fontsize: $body-font-size;
+
+    @if $times > 0 {
+        @while $times > 0 {
+            $fontsize: $fontsize * $intscale;
+            $times: $times - 1;
+        }
+    }
+    @if $times < 0 {
+        @while $times < 0 {
+            $fontsize: $fontsize / $intscale;
+            $times: $times + 1;
+        }
+    }
+
+    @return $fontsize;
+}
+
+// add a line-height, till font-size fits in
+@function get-lineheight($times:0, $intscale:$scale-mobile, $height:$base-line-mobile){
+    $fontsize: font-scale($times,$intscale);
+    $lineheight: $height;
+
+    @while $fontsize > $lineheight {
+        $lineheight: $lineheight + $height;
+    }
+
+    @return $lineheight;
+}
+*/
+/* generating font-size and corresponting line-height */
+/* get color from map */
 /**
  * bastekit grid
  */
@@ -439,112 +474,117 @@ body.debug {
       background-size: 24px 24px; } }
 
 /* line 19, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
-body {
+body, h4, h5, h6 {
   font-size: 1rem;
   line-height: 1.25rem; }
   @media screen and (min-width: 30em) {
-    body {
+    body, h4, h5, h6 {
       font-size: 1rem;
       line-height: 1.5rem; } }
 
-/* line 40, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
-body {
-  color: #666; }
+/* line 19, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.25rem; }
+  @media screen and (min-width: 30em) {
+    h3 {
+      font-size: 1.5rem;
+      line-height: 1.5rem; } }
 
-/* line 45, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
+/* line 19, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
+h2 {
+  font-size: 1.5625rem;
+  line-height: 2.5rem; }
+  @media screen and (min-width: 30em) {
+    h2 {
+      font-size: 2.25rem;
+      line-height: 3rem; } }
+
+/* line 19, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
 h1 {
   font-size: 1.95313rem;
-  line-height: 2.5rem;
+  line-height: 2.5rem; }
+  @media screen and (min-width: 30em) {
+    h1 {
+      font-size: 3.375rem;
+      line-height: 4.5rem; } }
+
+/* line 39, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
+body {
+  color: #585858; }
+
+/* line 44, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
+h1 {
   margin-top: 2.5rem;
   margin-bottom: 1.25rem; }
   @media all and (min-width: 30rem) {
     h1 {
-      font-size: 3.375rem;
-      line-height: 4.5rem;
       margin-top: 1.5rem;
       margin-bottom: 1.5rem; } }
 
-/* line 57, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
+/* line 56, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
 h2 {
-  font-size: 1.5625rem;
-  line-height: 2.5rem;
   margin-top: 2.5rem;
   margin-bottom: 1.25rem; }
   @media all and (min-width: 30rem) {
     h2 {
-      font-size: 2.25rem;
-      line-height: 3rem;
       margin-top: 1.5rem;
       margin-bottom: 1.5rem; } }
 
-/* line 69, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
+/* line 68, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
 h3 {
-  font-size: 1.25rem;
-  line-height: 1.25rem;
   margin-top: 1.25rem;
   margin-bottom: 1.25rem; }
   @media all and (min-width: 30rem) {
     h3 {
-      font-size: 1.5rem;
-      line-height: 1.5rem;
       margin-top: 1.5rem;
       margin-bottom: 1.5rem; } }
 
-/* line 81, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
+/* line 80, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
 h4 {
-  font-size: 1rem;
-  line-height: 1.25rem;
   margin-top: 1.25rem;
   margin-bottom: 1.25rem; }
   @media all and (min-width: 30rem) {
     h4 {
-      font-size: 1rem;
-      line-height: 1.5rem;
       margin-top: 1.5rem;
       margin-bottom: 1.5rem; } }
 
 /* line 94, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
 h5, h6 {
-  line-height: 1.25rem;
   margin-top: 1.25rem;
   margin-bottom: 1.25rem; }
   @media all and (min-width: 30rem) {
     h5, h6 {
-      line-height: 1.5rem;
       margin-top: 1.5rem;
       margin-bottom: 1.5rem; } }
 
-/* line 107, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
+/* line 108, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
 small, code {
   line-height: 1.1rem; }
   @media all and (min-width: 30rem) {
     small, code {
       line-height: 1.2rem; } }
 
-/* line 115, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
+/* line 116, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
 pre code {
   line-height: 1.25rem; }
   @media all and (min-width: 30rem) {
     pre code {
       line-height: 1.5rem; } }
 
-/* line 123, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
+/* line 124, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
 small {
-  font-size: 0.8rem; }
+  font-size: 1rem; }
   @media all and (min-width: 30rem) {
     small {
-      font-size: 0.66667rem; } }
+      font-size: 1rem; } }
 
-/* line 135, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
+/* line 136, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
 p, ul, ol, pre, dl {
-  font-size: 1rem;
-  line-height: 1.25rem;
   margin-top: 1.25rem;
   margin-bottom: 1.25rem; }
   @media all and (min-width: 30rem) {
     p, ul, ol, pre, dl {
-      font-size: 1rem;
-      line-height: 1.5rem;
       margin-top: 1.5rem;
       margin-bottom: 1.5rem; } }
 
@@ -658,7 +698,7 @@ select.basic-input {
   *   <button class="button">This is a button</button>
   *   <button class="button--secondary">This is a button</button>
   */
-/* line 16, D:/Workspace/gh-basekit/src/scss/components/_buttons.scss */
+/* line 19, D:/Workspace/gh-basekit/src/scss/components/_buttons.scss */
 .button, .button--secondary {
   text-transform: uppercase;
   border: none;
@@ -667,8 +707,9 @@ select.basic-input {
   padding: 0.625rem;
   display: block;
   width: 100%;
-  margin-bottom: 1.25rem; }
-  /* line 26, D:/Workspace/gh-basekit/src/scss/components/_buttons.scss */
+  margin-bottom: 1.25rem;
+  color: white; }
+  /* line 30, D:/Workspace/gh-basekit/src/scss/components/_buttons.scss */
   .button:active, .button--secondary:active {
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.5); }
   @media all and (min-width: 30rem) {
@@ -678,20 +719,19 @@ select.basic-input {
       vertical-align: middle;
       width: auto;
       margin-bottom: 1.5rem; } }
-  /* line 38, D:/Workspace/gh-basekit/src/scss/components/_buttons.scss */
+  /* line 42, D:/Workspace/gh-basekit/src/scss/components/_buttons.scss */
   textarea + .button, textarea + .button--secondary {
     margin-top: 1.25rem; }
     @media all and (min-width: 30rem) {
       textarea + .button, textarea + .button--secondary {
         margin-top: 1.5rem; } }
 
-/* line 47, D:/Workspace/gh-basekit/src/scss/components/_buttons.scss */
+/* line 51, D:/Workspace/gh-basekit/src/scss/components/_buttons.scss */
 .button {
-  background-color: #DDD; }
-  /* line 51, D:/Workspace/gh-basekit/src/scss/components/_buttons.scss */
+  background-color: #82283c; }
+  /* line 55, D:/Workspace/gh-basekit/src/scss/components/_buttons.scss */
   .button--secondary {
-    background-color: #666;
-    color: white; }
+    background-color: #7c6655; }
 
 /* line 1, D:/Workspace/gh-basekit/src/scss/components/_tables.scss */
 .basic-table, .basic-table--border {

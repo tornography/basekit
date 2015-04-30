@@ -36,71 +36,72 @@ body.debug {
     }
 }
 
-
 body {
     @extend %p;
-    color: $primary-color;
+    color: get-color("text");
 }
 
 h1 {
-    @include font-and-line(3,$scale-mobile,$base-line-mobile);
+    @extend %h;
+
     margin-top: $base-line-mobile * 2;
     margin-bottom: $base-line-mobile * 1;
 
     @include mappy-bp(baseline) {
-        @include font-and-line(3,$scale-mobile-gtmobile,$base-line-gtmobile);
         margin-top: $base-line-gtmobile * 1;
         margin-bottom: $base-line-gtmobile * 1;
     }
 }
 
 h2 {
-    @include font-and-line(2,$scale-mobile,$base-line-mobile);
+    @extend %sh;
+
     margin-top: $base-line-mobile * 2;
     margin-bottom: $base-line-mobile * 1;
 
     @include mappy-bp(baseline) {
-        @include font-and-line(2,$scale-mobile-gtmobile,$base-line-gtmobile);
         margin-top: $base-line-gtmobile * 1;
         margin-bottom: $base-line-gtmobile * 1;
     }
 }
 
 h3 {
-    @include font-and-line(1,$scale-mobile,$base-line-mobile);
+    @extend %bq;
+
     margin-top: $base-line-mobile * 1;
     margin-bottom: $base-line-mobile * 1;
 
     @include mappy-bp(baseline) {
-        @include font-and-line(1,$scale-mobile-gtmobile,$base-line-gtmobile);
         margin-top: $base-line-gtmobile * 1;
         margin-bottom: $base-line-gtmobile * 1;
     }
 }
 
 h4 {
-    @include font-and-line(0,$scale-mobile,$base-line-mobile);
+    @extend %p;
+
     margin-top: $base-line-mobile * 1;
     margin-bottom: $base-line-mobile * 1;
 
     @include mappy-bp(baseline) {
-        @include font-and-line(0,$scale-mobile-gtmobile,$base-line-gtmobile);
         margin-top: $base-line-gtmobile * 1;
         margin-bottom: $base-line-gtmobile * 1;
     }
+
 }
 
 h5,
 h6 {
-    line-height: get-lineheight(-1,$scale-mobile,$base-line-mobile);
+    @extend %p;
+
     margin-top: $base-line-mobile * 1;
     margin-bottom: $base-line-mobile * 1;
 
     @include mappy-bp(baseline) {
-        line-height: get-lineheight(-1,$scale-mobile-gtmobile,$base-line-gtmobile);
         margin-top: $base-line-gtmobile * 1;
         margin-bottom: $base-line-gtmobile * 1;
     }
+
 }
 
 small,
@@ -121,10 +122,10 @@ pre code {
 }
 
 small {
-    font-size: font-scale(-1,$scale-mobile);
+    font-size: map-get(map-get($rwd-typography, "default"), "base-line-height") / map-get(map-get($rwd-typography, "default"), "type-scale");
 
     @include mappy-bp(baseline) {
-        font-size: font-scale(-1,$scale-mobile-gtmobile);
+        font-size: map-get(map-get($rwd-typography, "medium"), "base-line-height") / map-get(map-get($rwd-typography, "medium"), "type-scale");
     }
 }
 
@@ -133,12 +134,11 @@ ul,
 ol,
 pre,
 dl {
-    @include font-and-line(0,$scale-mobile,$base-line-mobile);
+
     margin-top: $base-line-mobile * 1;
     margin-bottom: $base-line-mobile * 1;
 
     @include mappy-bp(baseline) {
-        @include font-and-line(0,$scale-mobile-gtmobile,$base-line-gtmobile);
         margin-top: $base-line-gtmobile * 1;
         margin-bottom: $base-line-gtmobile * 1;
     }
