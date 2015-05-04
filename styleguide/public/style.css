@@ -6,11 +6,11 @@
 /* line 25, D:/Workspace/gh-basekit/src/scss/utils/_grid.scss */
 .you-shall-not-pass {
   zoom: 1; }
-  /* line 10, D:/Workspace/gh-basekit/src/scss/utils/_mixins.scss */
+  /* line 18, D:/Workspace/gh-basekit/src/scss/utils/_mixins.scss */
   .you-shall-not-pass:before, .you-shall-not-pass:after {
     content: "";
     display: table; }
-  /* line 15, D:/Workspace/gh-basekit/src/scss/utils/_mixins.scss */
+  /* line 23, D:/Workspace/gh-basekit/src/scss/utils/_mixins.scss */
   .you-shall-not-pass:after {
     clear: both; }
 
@@ -412,26 +412,28 @@ td, th {
 /* apply a natural box layout model to all elements, but allowing components to change */
 /* line 2, D:/Workspace/gh-basekit/src/scss/base/_reset.scss */
 html {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  height: 100%; }
 
-/* line 5, D:/Workspace/gh-basekit/src/scss/base/_reset.scss */
+/* line 6, D:/Workspace/gh-basekit/src/scss/base/_reset.scss */
 *, *:before, *:after {
   box-sizing: inherit; }
 
-/* line 8, D:/Workspace/gh-basekit/src/scss/base/_reset.scss */
+/* line 9, D:/Workspace/gh-basekit/src/scss/base/_reset.scss */
 body {
-  background-color: #FFF; }
+  background-color: #FFF;
+  height: 100%; }
 
-/* line 12, D:/Workspace/gh-basekit/src/scss/base/_reset.scss */
+/* line 14, D:/Workspace/gh-basekit/src/scss/base/_reset.scss */
 pre code {
   display: block; }
 
-/* line 57, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
+/* line 83, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
 html {
   font-size: 16px; }
 
 /* debug */
-/* line 62, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
+/* line 88, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
 body.debug {
   background-image: linear-gradient(transparent 19px, rgba(255, 0, 0, 0.5) 19px);
   background-size: 20px 20px; }
@@ -440,115 +442,120 @@ body.debug {
       background-image: linear-gradient(transparent 23px, rgba(255, 0, 0, 0.5) 23px);
       background-size: 24px 24px; } }
 
-/* line 75, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
-body, h4 {
+/* line 101, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
+body, h4, .h4 {
   font-size: 1rem;
   line-height: 1.25rem; }
   @media screen and (min-width: 30em) {
-    body, h4 {
+    body, h4, .h4 {
       font-size: 1rem;
       line-height: 1.5rem; } }
 
-/* line 75, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
-h3 {
+/* line 101, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
+h3, .h3 {
   font-size: 1.25rem;
   line-height: 1.25rem; }
   @media screen and (min-width: 30em) {
-    h3 {
+    h3, .h3 {
       font-size: 1.5rem;
       line-height: 1.5rem; } }
 
-/* line 75, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
-h2 {
+/* line 101, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
+h2, .h2 {
   font-size: 1.5625rem;
   line-height: 2.5rem; }
   @media screen and (min-width: 30em) {
-    h2 {
+    h2, .h2 {
       font-size: 2.25rem;
       line-height: 3rem; } }
 
-/* line 75, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
-h1 {
+/* line 101, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
+h1, .h1 {
   font-size: 1.95313rem;
   line-height: 2.5rem; }
   @media screen and (min-width: 30em) {
-    h1 {
+    h1, .h1 {
       font-size: 3.375rem;
       line-height: 4.5rem; } }
 
-/* line 95, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
+/* line 121, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
 body {
   color: #585858; }
 
-/* line 102, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
-h1 {
+/* line 129, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
+h1, .h1 {
+  font-weight: bold;
   margin-top: 2.5rem;
   margin-bottom: 1.25rem; }
   @media all and (min-width: 30rem) {
-    h1 {
+    h1, .h1 {
       margin-top: 1.5rem;
       margin-bottom: 1.5rem; } }
 
-/* line 114, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
-h2 {
+/* line 143, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
+h2, .h2 {
+  font-weight: bold;
   margin-top: 2.5rem;
   margin-bottom: 1.25rem; }
   @media all and (min-width: 30rem) {
-    h2 {
+    h2, .h2 {
       margin-top: 1.5rem;
       margin-bottom: 1.5rem; } }
 
-/* line 126, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
-h3 {
+/* line 157, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
+h3, .h3 {
+  font-weight: bold;
   margin-top: 1.25rem;
   margin-bottom: 1.25rem; }
   @media all and (min-width: 30rem) {
-    h3 {
+    h3, .h3 {
       margin-top: 1.5rem;
       margin-bottom: 1.5rem; } }
 
-/* line 138, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
-h4 {
+/* line 171, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
+h4, .h4 {
+  font-weight: bold;
   margin-top: 1.25rem;
   margin-bottom: 1.25rem; }
   @media all and (min-width: 30rem) {
-    h4 {
+    h4, .h4 {
       margin-top: 1.5rem;
       margin-bottom: 1.5rem; } }
 
-/* line 152, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
-h5, h6 {
+/* line 188, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
+h5, .h5, h6, .h6 {
   font-size: 12.8px;
   margin-top: 1.25rem;
-  margin-bottom: 1.25rem; }
+  margin-bottom: 1.25rem;
+  font-weight: bold; }
   @media all and (min-width: 30rem) {
-    h5, h6 {
+    h5, .h5, h6, .h6 {
       font-size: 10.66667px;
       margin-top: 1.5rem;
       margin-bottom: 1.5rem; } }
 
-/* line 166, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
+/* line 203, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
 small, code {
   line-height: 1.1rem; }
   @media all and (min-width: 30rem) {
     small, code {
       line-height: 1.2rem; } }
 
-/* line 174, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
+/* line 211, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
 pre code {
   line-height: 1.25rem; }
   @media all and (min-width: 30rem) {
     pre code {
       line-height: 1.5rem; } }
 
-/* line 182, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
+/* line 219, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
 small {
   font-size: 12.8px; }
   @media all and (min-width: 30rem) {
     small {
       font-size: 10.66667px; } }
 
-/* line 194, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
+/* line 231, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
 p, ul, ol, pre, dl {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem; }
@@ -557,7 +564,7 @@ p, ul, ol, pre, dl {
       margin-top: 1.5rem;
       margin-bottom: 1.5rem; } }
 
-/* line 205, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
+/* line 242, D:/Workspace/gh-basekit/src/scss/base/_typography.scss */
 blockquote {
   margin: 2.5rem; }
   @media all and (min-width: 30rem) {
@@ -582,7 +589,7 @@ blockquote {
   padding: 10px;
   text-align: center; }
 
-/* line 9, D:/Workspace/gh-basekit/src/scss/components/_inputs.scss */
+/* line 76, D:/Workspace/gh-basekit/src/scss/components/_inputs.scss */
 .basic-label {
   display: block;
   padding: 0.625rem 0; }
@@ -590,7 +597,7 @@ blockquote {
     .basic-label {
       padding: 0.75rem 0; } }
 
-/* line 17, D:/Workspace/gh-basekit/src/scss/components/_inputs.scss */
+/* line 84, D:/Workspace/gh-basekit/src/scss/components/_inputs.scss */
 .basic-input {
   display: block;
   width: 100%;
@@ -609,7 +616,7 @@ blockquote {
       padding-top: calc(0.75rem + 1px * 2);
       padding-bottom: calc(0.75rem + 1px * 2); } }
 
-/* line 39, D:/Workspace/gh-basekit/src/scss/components/_inputs.scss */
+/* line 106, D:/Workspace/gh-basekit/src/scss/components/_inputs.scss */
 select.basic-input {
   padding: 0 calc(0.625rem - 1px);
   height: 2.5rem; }
@@ -618,7 +625,7 @@ select.basic-input {
       padding: calc(0.75rem + 1px);
       height: 3rem; } }
 
-/* line 49, D:/Workspace/gh-basekit/src/scss/components/_inputs.scss */
+/* line 116, D:/Workspace/gh-basekit/src/scss/components/_inputs.scss */
 .basic-textarea {
   display: block;
   width: 100%;
@@ -634,7 +641,7 @@ select.basic-input {
       padding-top: calc(0.75rem + 1px * 2);
       padding-bottom: calc(0.75rem + 1px * 7); } }
 
-/* line 72, D:/Workspace/gh-basekit/src/scss/components/_inputs.scss */
+/* line 139, D:/Workspace/gh-basekit/src/scss/components/_inputs.scss */
 .checkradio__input, .checkradio__input--check, .checkradio__input--radio {
   position: absolute;
   left: 0;
@@ -646,7 +653,7 @@ select.basic-input {
     .checkradio__input, .checkradio__input--check, .checkradio__input--radio {
       top: 0.75rem; } }
 
-/* line 83, D:/Workspace/gh-basekit/src/scss/components/_inputs.scss */
+/* line 150, D:/Workspace/gh-basekit/src/scss/components/_inputs.scss */
 .checkradio__label {
   display: block;
   position: relative;
@@ -656,8 +663,9 @@ select.basic-input {
     .checkradio__label {
       margin-bottom: 1.5rem; } }
 
-/* line 26, D:/Workspace/gh-basekit/src/scss/components/_buttons.scss */
+/* line 27, D:/Workspace/gh-basekit/src/scss/components/_buttons.scss */
 .button {
+  text-align: center;
   text-transform: uppercase;
   border: none;
   border-radius: 3px;
@@ -665,18 +673,19 @@ select.basic-input {
   padding: 0.625rem;
   display: block;
   width: 100%;
+  height: 2.5rem;
   margin-bottom: 1.25rem;
   color: white; }
-  /* line 37, D:/Workspace/gh-basekit/src/scss/components/_buttons.scss */
+  /* line 40, D:/Workspace/gh-basekit/src/scss/components/_buttons.scss */
   .button:active {
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.5); }
-  /* line 44, D:/Workspace/gh-basekit/src/scss/components/_buttons.scss */
+  /* line 47, D:/Workspace/gh-basekit/src/scss/components/_buttons.scss */
   .button:active, .button:visited, .button:active, .button:hover {
     color: white; }
-  /* line 48, D:/Workspace/gh-basekit/src/scss/components/_buttons.scss */
+  /* line 51, D:/Workspace/gh-basekit/src/scss/components/_buttons.scss */
   .button:hover {
     background-color: #bfbfbf; }
-  /* line 52, D:/Workspace/gh-basekit/src/scss/components/_buttons.scss */
+  /* line 55, D:/Workspace/gh-basekit/src/scss/components/_buttons.scss */
   .button:disabled {
     color: #585858;
     background-color: #3f3f3f; }
@@ -686,32 +695,41 @@ select.basic-input {
       display: inline-block;
       vertical-align: middle;
       width: auto;
+      height: 3rem;
       margin-bottom: 1.5rem; } }
-  /* line 65, D:/Workspace/gh-basekit/src/scss/components/_buttons.scss */
+  /* line 69, D:/Workspace/gh-basekit/src/scss/components/_buttons.scss */
   textarea + .button {
     margin-top: 1.25rem; }
     @media all and (min-width: 30rem) {
       textarea + .button {
         margin-top: 1.5rem; } }
 
-/* line 74, D:/Workspace/gh-basekit/src/scss/components/_buttons.scss */
+/* line 78, D:/Workspace/gh-basekit/src/scss/components/_buttons.scss */
 .button {
   background-color: #7f7f7f; }
-  /* line 78, D:/Workspace/gh-basekit/src/scss/components/_buttons.scss */
+  /* line 82, D:/Workspace/gh-basekit/src/scss/components/_buttons.scss */
   .button--primary {
     background-color: #82283c; }
-  /* line 82, D:/Workspace/gh-basekit/src/scss/components/_buttons.scss */
+  /* line 86, D:/Workspace/gh-basekit/src/scss/components/_buttons.scss */
   .button--secondary {
     background-color: #7c6655; }
+  /* line 90, D:/Workspace/gh-basekit/src/scss/components/_buttons.scss */
+  .button--small {
+    height: 1.25rem;
+    padding: 0 0.625rem; }
+    @media all and (min-width: 30rem) {
+      .button--small {
+        height: 1.5rem;
+        padding: 0 0.75rem; } }
 
-/* line 1, D:/Workspace/gh-basekit/src/scss/components/_tables.scss */
+/* line 50, D:/Workspace/gh-basekit/src/scss/components/_tables.scss */
 .basic-table, .basic-table--border {
   width: 100%;
   margin-bottom: 1.25rem; }
   @media all and (min-width: 30rem) {
     .basic-table, .basic-table--border {
       margin-bottom: 1.5rem; } }
-  /* line 9, D:/Workspace/gh-basekit/src/scss/components/_tables.scss */
+  /* line 58, D:/Workspace/gh-basekit/src/scss/components/_tables.scss */
   .basic-table th, .basic-table--border th, .basic-table td, .basic-table--border td {
     text-align: left;
     padding: 0.625rem; }
@@ -719,7 +737,7 @@ select.basic-input {
       .basic-table th, .basic-table--border th, .basic-table td, .basic-table--border td {
         padding: 0.75rem; } }
 
-/* line 24, D:/Workspace/gh-basekit/src/scss/components/_tables.scss */
+/* line 73, D:/Workspace/gh-basekit/src/scss/components/_tables.scss */
 .basic-table--border th, .basic-table--border td {
   padding-top: calc(0.625rem - 1px);
   border-bottom: 1px solid #DDD; }
@@ -753,25 +771,14 @@ select.basic-input {
 #facebook path:nth-child(2) {
   fill: green; }
 
-/**
-  * @name Basic List
-  * @description A basic list with no styling
-  * 
-  * @markup
-  * <ul>
-  *   <li>one</li>
-  *   <li>two</li>
-  *   <li>three</li>
-  * </ul>
-  */
-/* line 16, D:/Workspace/gh-basekit/src/scss/components/_lists.scss */
+/* line 24, D:/Workspace/gh-basekit/src/scss/components/_lists.scss */
 .basic-list__item + .basic-list__item {
   margin-top: 1.25rem; }
   @media all and (min-width: 30rem) {
     .basic-list__item + .basic-list__item {
       margin-top: 1.5rem; } }
 
-/* line 25, D:/Workspace/gh-basekit/src/scss/components/_lists.scss */
+/* line 33, D:/Workspace/gh-basekit/src/scss/components/_lists.scss */
 .basic-list--small .basic-list__item + .basic-list__item {
   margin-top: 0; }
   @media all and (min-width: 30rem) {
@@ -821,20 +828,252 @@ select.basic-input {
     .main-navi__link {
       padding: calc(1.5rem/2 - 1px); } }
 
-/* line 10, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
-.kss-mod-desc-group p {
-  margin: 0; }
+/* line 9, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+.bk-style__body {
+  padding: 0; }
 
-/* line 15, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
-.kss-markup {
-  background-color: rgba(0, 0, 0, 0.1);
+/* line 13, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+.bk-style__wrapper {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: calc(100% - 30px); }
+
+/* line 18, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+.bk-style__sidebar {
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 300px;
+  padding: 0 20px; }
+
+/* line 24, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+.bk-style__main {
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding-right: 20px;
+  max-width: 800px; }
+
+/* line 30, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+.bk-style__nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   border-radius: 5px;
-  padding: 10px; }
-  /* line 20, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
-  .kss-markup pre {
-    margin: 0;
-    line-height: 1.25rem; }
+  border: 1px solid #CCC; }
 
-/* line 26, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
-.kss-mod-desc {
-  background-color: rgba(0, 0, 0, 0.1); }
+/* line 39, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+.bk-nav-list__item + .bk-nav-list__item {
+  border-top: 1px solid #CCC; }
+
+/* line 44, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+.bk-nav-list__link {
+  display: block;
+  background-color: #f9f9f9;
+  padding: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #585858; }
+  /* line 52, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+  .bk-nav-list__item:first-child .bk-nav-list__link {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px; }
+  /* line 57, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+  .bk-nav-list__item:last-child .bk-nav-list__link {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px; }
+  /* line 62, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+  .bk-nav-list__link:hover {
+    background-color: #f2f2f2; }
+
+/* line 67, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+.bk-mod-list {
+  list-style: none;
+  margin: 0 0 20px 0;
+  padding: 0;
+  border-radius: 5px;
+  border: 1px solid #CCC; }
+
+/* line 76, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+.bk-mod-list__item + .bk-mod-list__item {
+  border-top: 1px solid #CCC; }
+
+/* line 81, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+.bk-mod__name {
+  float: right;
+  white-space: nowrap;
+  padding: 0 0.5rem;
+  border-bottom-left-radius: 5px;
+  border-left: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+  background-color: #f9f9f9;
+  font-size: 0.8rem; }
+
+/* line 92, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+.bk-mod__name--default {
+  display: none; }
+
+/* line 96, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+.bk-mod__desc {
+  padding: 5px;
+  display: none; }
+
+/* line 101, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+.bk-mod__example {
+  padding: 10px; }
+
+/* line 105, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+.bk-mod__code {
+  margin: 0;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px; }
+
+/* line 113, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+.bk-style__footer {
+  height: 30px;
+  background-color: #bfbfbf;
+  text-align: center;
+  color: white;
+  line-height: 30px; }
+
+/* Pretty printing styles. Used with prettify.js. */
+/* SPAN elements with the classes below are added by prettyprint. */
+/* line 125, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+.pln {
+  color: #000000; }
+
+/* plain text */
+@media screen {
+  /* line 130, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+  .str {
+    color: #008800; }
+  /* string content */
+  /* line 134, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+  .kwd {
+    color: #000088; }
+  /* a keyword */
+  /* line 138, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+  .com {
+    color: #880000; }
+  /* a comment */
+  /* line 142, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+  .typ {
+    color: #660066; }
+  /* a type name */
+  /* line 146, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+  .lit {
+    color: #006666; }
+  /* a literal value */
+  /* punctuation, lisp open bracket, lisp close bracket */
+  /* line 153, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+  .pun, .opn, .clo {
+    color: #666600; }
+  /* line 156, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+  .tag {
+    color: #000088; }
+  /* a markup tag name */
+  /* line 160, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+  .atn {
+    color: #660066; }
+  /* a markup attribute name */
+  /* line 164, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+  .atv {
+    color: #008800; }
+  /* a markup attribute value */
+  /* line 169, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+  .dec, .var {
+    color: #660066; }
+  /* a declaration; a variable name */
+  /* line 173, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+  .fun {
+    color: #ff0000; }
+  /* a function name */ }
+
+/* Use higher contrast and text-weight for printable form. */
+@media print, projection {
+  /* line 180, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+  .str {
+    color: #006600; }
+  /* line 183, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+  .kwd {
+    color: #006;
+    font-weight: bold; }
+  /* line 187, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+  .com {
+    color: #600;
+    font-style: italic; }
+  /* line 191, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+  .typ {
+    color: #404;
+    font-weight: bold; }
+  /* line 195, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+  .lit {
+    color: #004444; }
+  /* line 200, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+  .pun, .opn, .clo {
+    color: #444400; }
+  /* line 203, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+  .tag {
+    color: #006;
+    font-weight: bold; }
+  /* line 207, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+  .atn {
+    color: #440044; }
+  /* line 210, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+  .atv {
+    color: #006600; } }
+
+/* Put a border around prettyprinted code snippets. */
+/*pre.prettyprint { padding: 2px; border: 1px solid #888 }*/
+/* Specify class=linenums on a pre to get line numbering */
+/* line 217, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+ol.linenums {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+/* IE indents via margin-left */
+/* line 229, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 {
+  list-style-type: none; }
+
+/* Alternate shading for lines */
+/* line 237, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+li.L1, li.L3, li.L5, li.L7, li.L9 {
+  background: #eeeeee; }
+
+@media screen and (max-width: 768px) {
+  /* line 241, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+  #kss-main {
+    position: static;
+    width: 90%;
+    margin: 0 auto;
+    padding-left: 0; }
+  /* line 247, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+  #kss-nav {
+    position: static;
+    display: block;
+    width: auto;
+    margin: 0;
+    background: 0;
+    box-shadow: none;
+    border-bottom: 1px solid #ddd; }
+  /* line 256, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+  #kss-nav nav > ul {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em; }
+  /* line 260, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+  #kss-nav nav > ul > li {
+    display: inline-block;
+    padding-right: 1.5em; }
+  /* line 264, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+  #kss-header > hgroup > h1 {
+    margin-top: 0;
+    margin-bottom: 0; } }
+
+@media screen and (max-width: 640px) {
+  /* line 270, D:/Workspace/gh-basekit/src/scss/styleguide.scss */
+  #kss-github {
+    display: none; } }

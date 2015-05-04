@@ -1,16 +1,17 @@
 // Buttons
 // 
-// General button usage
+// Die Standardklasse für buttons ist <code>.button</code> und wird durch modifier erweitert.
 //
-// Markup:  
+// Markup:
 // <button class="button {$modifiers}">Button</button>
 // <a href="#" class="button {$modifiers}">Link</a>
 // <input type="button" value="input[type='button']" class="button {$modifiers}">
 //
-// :hover    - Hovered button  
-// :disabled - Button is disabled  
-// .button--primary - Primary button for main action  
-// .button--secondary - Secondary button
+// :hover    - Zustand: hover  
+// :disabled - Zustant: disabled 
+// .button--primary - Hauptbutton (primary)
+// .button--secondary - Sekundärbutton (secondary)
+// .button--small - Kleiner Button (einzeilig)
 //
 // Styleguide 1
 
@@ -24,6 +25,7 @@ $button-text-light: get-color("text","white");
 $shdow-color: get-color("shadow");
 
 %button {
+    text-align: center;
     text-transform: uppercase;
     border: none;
     border-radius: $input-border-radius;
@@ -31,6 +33,7 @@ $shdow-color: get-color("shadow");
     padding: ($base-line-mobile / 2);
     display: block;
     width: 100%;
+    height: $base-line-mobile * 2;
     margin-bottom: $base-line-mobile;
     color: $button-text-light;
 
@@ -59,6 +62,7 @@ $shdow-color: get-color("shadow");
         display: inline-block;
         vertical-align: middle;
         width: auto;
+        height: $base-line-gtmobile * 2;
         margin-bottom: $base-line-gtmobile;
     }
 
@@ -81,5 +85,15 @@ $shdow-color: get-color("shadow");
 
     &--secondary {
         background-color: $secondary-button-color;
+    }
+
+    &--small {
+        height: $base-line-mobile;
+        padding: 0 ($base-line-mobile / 2);
+
+        @include mappy-bp(baseline) {
+            height: $base-line-gtmobile;
+            padding: 0 ($base-line-gtmobile / 2);
+        }
     }
 }

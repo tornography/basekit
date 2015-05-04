@@ -93,10 +93,11 @@ gulp.task('dss', function() {
         .pipe(exit());
 });
 
-gulp.task('kss', function() {
+gulp.task('kss', ['sass'], function() {
     gulp.src('src/scss/**/*.{sass,scss}')
         .pipe(kss({
-            overview: 'styleguide/styleguide.md'
+            overview: 'styleguide/styleguide.md',
+            templateDirectory: 'styleguide/template'
         }))
         .pipe(gulp.dest('styleguide/'));
 

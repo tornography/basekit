@@ -1,20 +1,265 @@
-.kss-mod-desc-group {
-    p {
-        margin: 0;
-    }
+.bk-style__body {
+    padding: 0;
 }
 
-.kss-markup {
-    background-color: rgba(0,0,0,0.1);
+.bk-style__wrapper {
+    display: flex;
+    min-height: calc(100% - 30px);
+}
+
+.bk-style__sidebar {
+    flex: 0 0 auto;
+    width: 300px;
+    padding: 0 20px;
+}
+
+.bk-style__main{
+    flex: 1 1 auto;
+    padding-right: 20px;
+    max-width: 800px;
+}
+
+.bk-style__nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     border-radius: 5px;
-    padding: 10px;
+    border: 1px solid #CCC;
+}
 
-    pre {
-        margin: 0;
-        line-height: 1.25rem;
+.bk-nav-list__item {
+    & + & {
+        border-top: 1px solid #CCC;
     }
 }
 
-.kss-mod-desc {
-    background-color: rgba(0,0,0,0.1);
+.bk-nav-list__link {
+    display: block;
+    background-color: mix(white,black,98%);
+    padding: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    color: get-color("text");
+
+    .bk-nav-list__item:first-child & {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+    }
+
+    .bk-nav-list__item:last-child & {
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+
+    &:hover {
+        background-color: mix(white,black,95%);
+    }
+}
+
+.bk-mod-list {
+    list-style: none;
+    margin: 0 0 20px 0;
+    padding: 0;
+    border-radius: 5px;
+    border: 1px solid #CCC;
+}
+
+.bk-mod-list__item {
+    & + & {
+        border-top: 1px solid #CCC;
+    }
+}
+
+.bk-mod__name {
+    float: right;
+    white-space: nowrap;
+    padding: 0 0.5rem;
+    border-bottom-left-radius: 5px;
+    border-left: 1px solid #CCC;
+    border-bottom: 1px solid #CCC;
+    background-color: mix(white,black,98%);
+    font-size: 0.8rem;
+}
+
+.bk-mod__name--default {
+    display: none;
+}
+
+.bk-mod__desc {
+    padding: 5px;
+    display: none;
+}
+
+.bk-mod__example {
+    padding: 10px;
+}
+
+.bk-mod__code {
+    margin: 0;
+    padding: 10px;
+    background-color: mix(white,black,95%);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.bk-style__footer {
+    height: 30px;
+    background-color: get-color("background","light");
+    text-align: center;
+    color: get-color("text","white");
+    line-height: 30px;
+}
+
+
+
+/* Pretty printing styles. Used with prettify.js. */
+/* SPAN elements with the classes below are added by prettyprint. */
+.pln {
+  color: #000000;
+}
+/* plain text */
+@media screen {
+  .str {
+    color: #008800;
+  }
+  /* string content */
+  .kwd {
+    color: #000088;
+  }
+  /* a keyword */
+  .com {
+    color: #880000;
+  }
+  /* a comment */
+  .typ {
+    color: #660066;
+  }
+  /* a type name */
+  .lit {
+    color: #006666;
+  }
+  /* a literal value */
+  /* punctuation, lisp open bracket, lisp close bracket */
+  .pun,
+  .opn,
+  .clo {
+    color: #666600;
+  }
+  .tag {
+    color: #000088;
+  }
+  /* a markup tag name */
+  .atn {
+    color: #660066;
+  }
+  /* a markup attribute name */
+  .atv {
+    color: #008800;
+  }
+  /* a markup attribute value */
+  .dec,
+  .var {
+    color: #660066;
+  }
+  /* a declaration; a variable name */
+  .fun {
+    color: #ff0000;
+  }
+  /* a function name */
+}
+/* Use higher contrast and text-weight for printable form. */
+@media print, projection {
+  .str {
+    color: #006600;
+  }
+  .kwd {
+    color: #006;
+    font-weight: bold;
+  }
+  .com {
+    color: #600;
+    font-style: italic;
+  }
+  .typ {
+    color: #404;
+    font-weight: bold;
+  }
+  .lit {
+    color: #004444;
+  }
+  .pun,
+  .opn,
+  .clo {
+    color: #444400;
+  }
+  .tag {
+    color: #006;
+    font-weight: bold;
+  }
+  .atn {
+    color: #440044;
+  }
+  .atv {
+    color: #006600;
+  }
+}
+/* Put a border around prettyprinted code snippets. */
+/*pre.prettyprint { padding: 2px; border: 1px solid #888 }*/
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/* IE indents via margin-left */
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L5,
+li.L6,
+li.L7,
+li.L8 {
+  list-style-type: none;
+}
+/* Alternate shading for lines */
+li.L1,
+li.L3,
+li.L5,
+li.L7,
+li.L9 {
+  background: #eeeeee;
+}
+@media screen and (max-width: 768px) {
+  #kss-main {
+    position: static;
+    width: 90%;
+    margin: 0 auto;
+    padding-left: 0;
+  }
+  #kss-nav {
+    position: static;
+    display: block;
+    width: auto;
+    margin: 0;
+    background: 0;
+    box-shadow: none;
+    border-bottom: 1px solid #ddd;
+  }
+  #kss-nav nav > ul {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+  #kss-nav nav > ul > li {
+    display: inline-block;
+    padding-right: 1.5em;
+  }
+  #kss-header > hgroup > h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 640px) {
+  #kss-github {
+    display: none;
+  }
 }

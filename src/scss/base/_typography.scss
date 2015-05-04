@@ -2,7 +2,7 @@
 // 
 // Font sizes, styling and used webfonts.
 // 
-// Styleguide 2
+// Styleguide 2.
 
 // Headlines
 // 
@@ -14,7 +14,25 @@
 // <h5>Headline Level 5</h5>
 // <h6>Headline Level 6</h6>
 // 
-// Styleguide 2.1
+// Styleguide 2.1.1
+
+// Headline Klassen
+// 
+// Die Überschriften klassen <code>.h1</code> bis <code>.h6</code> erlauben es Elemente optisch wie eine Überschrift anzupassen.
+// Überschriften-Elemente werden durch die Klassen überschrieben, so dass eine <code>&lt;h1 class="h3"&gt;</code> wie eine Überschrift
+// der dritten Ebene aussieht.
+//
+// Markup:
+// <p class="{$modifiers}">Sieht nur aus wie eine Überschrift</p>
+//
+// .h1 - Sieht aus wie eine H1
+// .h2 - Sieht aus wie eine H2
+// .h3 - Sieht aus wie eine H3
+// .h4 - Sieht aus wie eine H4
+// .h5 - Sieht aus wie eine H5
+// .h6 - Sieht aus wie eine H6
+// 
+// Styleguide 2.1.2
 
 // Paragraphs
 // 
@@ -23,12 +41,19 @@
 //
 // Styleguide 2.2
 
+// Blockquote
+// 
+// Markup:
+// <blockquote><p>(blockquote) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
+//
+// Styleguide 2.3
+
 // Code
 // 
 // Markup:
 // <pre><code>var foo = array("bar","baz");</code></pre>
 // 
-// Styleguide 2.3
+// Styleguide 2.4
 
 // Inline text
 // 
@@ -52,7 +77,8 @@
 // The <var>variable element</var>, such as <var>x</var> = <var>y</var>.<br>
 // The time element: <time datetime="2013-04-06T12:32+00:00">2 weeks ago</time>
 // 
-// Styleguide 2.4
+// Styleguide 2.5
+
 
 html {
     font-size: $base-font-size;
@@ -99,8 +125,10 @@ body {
 
 
 
-h1 {
+h1,
+.h1 {
     @extend %h;
+    font-weight: bold;
 
     margin-top: $base-line-mobile * 2;
     margin-bottom: $base-line-mobile * 1;
@@ -111,8 +139,10 @@ h1 {
     }
 }
 
-h2 {
+h2,
+.h2 {
     @extend %sh;
+    font-weight: bold;
 
     margin-top: $base-line-mobile * 2;
     margin-bottom: $base-line-mobile * 1;
@@ -123,8 +153,10 @@ h2 {
     }
 }
 
-h3 {
+h3,
+.h3 {
     @extend %bq;
+    font-weight: bold;
 
     margin-top: $base-line-mobile * 1;
     margin-bottom: $base-line-mobile * 1;
@@ -135,8 +167,10 @@ h3 {
     }
 }
 
-h4 {
+h4,
+.h4 {
     @extend %p;
+    font-weight: bold;
 
     margin-top: $base-line-mobile * 1;
     margin-bottom: $base-line-mobile * 1;
@@ -149,10 +183,13 @@ h4 {
 }
 
 h5,
-h6 {
+.h5,
+h6,
+.h6 {
     font-size: $base-font-size / map-get(map-get($rwd-typography, "default"), "type-scale");
     margin-top: $base-line-mobile * 1;
     margin-bottom: $base-line-mobile * 1;
+    font-weight: bold;
 
     @include mappy-bp(baseline) {
         font-size: $base-font-size / map-get(map-get($rwd-typography, "medium"), "type-scale");

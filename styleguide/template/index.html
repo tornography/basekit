@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <title>Basekit Styleguide</title>
+  <meta name="description" content="">
+
+  <meta name="viewport" content="width=device-width">
+
+  <!--<link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>-->
+
+  <!--<link rel="stylesheet" href="public/kss.css">-->
+  <link rel="stylesheet" href="public/style.css">
+
+</head>
+<body>
+
+  <div id="kss-wrapper-x" class="bk-style__wrapper">
+
+    <div id="kss-nav-x" class="bk-style__sidebar">
+      <header id="kss-header">
+        <hgroup><h1 class="h3">Styleguide</h1></hgroup>
+      </header>
+      <aside>
+        <nav><ul class="bk-style__nav-list">
+          <li class="bk-nav-list__item"><a class="bk-nav-list__link" href="index.html">Übersicht</a></li>
+          {{#eachRoot}}
+            <li class="bk-nav-list__item"><a  class="bk-nav-list__link" href="section-{{reference}}.html">{{reference}}.0: {{header}}</a></li>
+          {{/eachRoot}}
+        </ul></nav>
+      </aside>
+    </div>
+
+    <div role="main" id="kss-main-x" class="bk-style__main">
+      <article id="kss-content">
+        {{#if overview}}
+          {{html overview}}
+        {{else}}
+
+          {{!
+            Find each section, in order.
+            If there's no markup or modifiers supplied, use a Markdown-only
+            layout instead.
+
+            The "root" element comes first in this loop, and can be detected using
+            the "#whenDepth 1" block as seen below.
+          }}
+          {{#eachSection rootNumber}}
+            {{#whenDepth 1}}
+              <h2 class="kss-title"><span class="kss-ref">{{ reference }}.0</span> - {{ header }}</h2>
+            {{else}}
+             <section class="kss-depth-{{ refDepth }}">
+              <h3 class="kss-title"><span class="kss-ref">{{ reference }}</span> - {{ header }}</h3>
+            {{/whenDepth}}
+              {{#ifAny markup modifiers}}
+                  <div class="kss-box">{{html description}}</div>
+
+                  <ul class="bk-mod-list">
+                    <li class="bk-mod-list__item">
+                      <span class="bk-mod__name bk-mod__name--default">(default)</span>
+                      <div class="bk-mod__desc"></div>
+                      <div class="bk-mod__example">
+                        {{modifierMarkup}}
+                      </div>
+                    </li>
+                    {{#eachModifier}}
+                    <li class="bk-mod-list__item">
+                      <span class="bk-mod__name">{{name}}</span>
+                      <div class="bk-mod__desc">{{html description}}</div>
+                      <div class="bk-mod__example">
+                        {{modifierMarkup}}
+                      </div>
+                    </li>
+                    {{/eachModifier}}
+                    <li class="bk-mod-list__item">
+                      <pre class="bk-mod__code prettyprint lang-html">{{markup}}</pre>
+                    </li>
+                  </ul>
+              {{else}}
+                  {{#if description}}
+                    {{html description}}
+                  {{/if}}
+              {{/ifAny}}
+            {{#whenDepth 1}} {{else}}
+              </section>
+            {{/whenDepth}}
+          {{/eachSection}}
+        {{/if}}
+      </article>
+    </div>
+
+  </div>
+
+  <footer class="bk-style__footer">
+    Basekit Styleguide
+  </footer>
+  <!-- SCRIPTS -->
+  <script src="public/kss.js"></script>
+  <script src="public/prettify.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      var sidebarAdjust = function() {
+        // Match footer/body height
+        var height = Math.max($(window).height(), $('#kss-main').height());
+
+        if ($(window).width() <= 768) {
+          $('#kss-main, #kss-nav').height('auto');
+        } else {
+          $('#kss-main, #kss-nav').height(height);
+        }
+      };
+
+      $(window).resize(sidebarAdjust);
+      $(window).scroll(sidebarAdjust);
+      sidebarAdjust();
+
+      // Ensure code blocks are highlighted properly...
+      $('pre>code').addClass('prettyprint');
+      prettyPrint();
+
+    });
+  </script>
+
+  {{! This won't be included in the demo page }}
+  {{#if argv.xdemo}}
+    <script type="text/javascript">
+    var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-12249588-4']); _gaq.push(['_trackPageview']);
+    (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();
+    </script>
+  {{/if}}
+</body>
+</html>

@@ -1,14 +1,22 @@
-/**
-  * @name Basic List
-  * @description A basic list with no styling
-  * 
-  * @markup
-  * <ul>
-  *   <li>one</li>
-  *   <li>two</li>
-  *   <li>three</li>
-  * </ul>
-  */
+// Einfache Liste
+// 
+// Einfache sortierte und unsortierte Listen.
+// 
+// Markup:
+// <ul class="basic-list {$modifiers}">
+//    <li class="basic-list__item">Bacon ipsum dolor amet ham hock shank rump cupim, leberkas corned beef kevin andouille pastrami kielbasa. Pork beef boudin andouille, cupim picanha fatback meatloaf turducken leberkas. Kielbasa swine pork loin chicken, chuck </li>
+//    <li class="basic-list__item">Ball tip boudin hamburger strip steak, ham filet mignon alcatra pork loin t-bone corned beef. Shank picanha ball tip tenderloin strip steak kielbasa turkey filet mignon leberkas. Brisket frankfurter hamburger, ground round sausage </li>
+//    <li class="basic-list__item">Venison pig ribeye shank kielbasa prosciutto, drumstick fatback jowl sirloin ground round. Pancetta andouille shoulder kielbasa shank. Spare ribs kevin ham hock pork loin. Short ribs andouille beef, tail venison cupim picanha </li>
+// </ul>
+// <ol class="basic-list {$modifiers}">
+//    <li class="basic-list__item">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+//    <li class="basic-list__item">Aliquam tincidunt mauris eu risus.</li>
+//    <li class="basic-list__item">Vestibulum auctor dapibus neque.</li>
+// </ol>
+// 
+// .basic-list--small - Listenelemente ohne eine Zeile Abstand
+// 
+// Styleguide 3.2
 
 .basic-list {
 

@@ -3,6 +3,14 @@
     line-height: get-lineheight($times,$intscale,$height);
 };
 
+// Clearfix
+// 
+// Used to clear floats, and prevent parent elements from collapsing
+// 
+// Markup: @mixin clearfix()
+// 
+// Compatible in IE6+, Firefox 2+, Safari 4+.
+
 @mixin clearfix(){
     zoom: 1;
 

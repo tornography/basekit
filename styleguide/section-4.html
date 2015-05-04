@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <title>Basekit Styleguide</title>
+  <meta name="description" content="">
+
+  <meta name="viewport" content="width=device-width">
+
+  <!--<link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>-->
+
+  <!--<link rel="stylesheet" href="public/kss.css">-->
+  <link rel="stylesheet" href="public/style.css">
+
+</head>
+<body>
+
+  <div id="kss-wrapper-x" class="bk-style__wrapper">
+
+    <div id="kss-nav-x" class="bk-style__sidebar">
+      <header id="kss-header">
+        <hgroup><h1 class="h3">Styleguide</h1></hgroup>
+      </header>
+      <aside>
+        <nav><ul class="bk-style__nav-list">
+          <li class="bk-nav-list__item"><a class="bk-nav-list__link" href="index.html">Übersicht</a></li>
+            <li class="bk-nav-list__item"><a  class="bk-nav-list__link" href="section-1.html">1.0: Buttons</a></li>
+            <li class="bk-nav-list__item"><a  class="bk-nav-list__link" href="section-2.html">2.0: Typography</a></li>
+            <li class="bk-nav-list__item"><a  class="bk-nav-list__link" href="section-3.html">3.0: Listen und Tabellen</a></li>
+            <li class="bk-nav-list__item"><a  class="bk-nav-list__link" href="section-4.html">4.0: Form Inputs</a></li>
+        </ul></nav>
+      </aside>
+    </div>
+
+    <div role="main" id="kss-main-x" class="bk-style__main">
+      <article id="kss-content">
+
+              <h2 class="kss-title"><span class="kss-ref">4.0</span> - Form Inputs</h2>
+                          <section class="kss-depth-2">
+              <h3 class="kss-title"><span class="kss-ref">4.1</span> - Label und Textinputs</h3>
+                  <div class="kss-box"></div>
+
+                  <ul class="bk-mod-list">
+                    <li class="bk-mod-list__item">
+                      <span class="bk-mod__name bk-mod__name--default">(default)</span>
+                      <div class="bk-mod__desc"></div>
+                      <div class="bk-mod__example">
+                        <div class="form-group">
+    <label for="name" class="basic-label">Text:</label>
+    <input type="text" id="name" class="basic-input" placeholder="Text"/>
+</div>
+<div class="form-group">
+    <label for="password" class="basic-label">Passwort:</label>
+    <input type="password" id="password" class="basic-input" placeholder="Passwort"/>
+</div>
+<div class="form-group">
+    <label for="textarea" class="basic-label">Textarea:</label>
+    <textarea name="textarea" id="textarea" class="basic-textarea" placeholder="Textarea here"></textarea>
+</div>
+                      </div>
+                    </li>
+                    <li class="bk-mod-list__item">
+                      <pre class="bk-mod__code prettyprint lang-html">&lt;div class=&quot;form-group&quot;&gt;
+    &lt;label for=&quot;name&quot; class=&quot;basic-label&quot;&gt;Text:&lt;/label&gt;
+    &lt;input type=&quot;text&quot; id=&quot;name&quot; class=&quot;basic-input&quot; placeholder=&quot;Text&quot;/&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-group&quot;&gt;
+    &lt;label for=&quot;password&quot; class=&quot;basic-label&quot;&gt;Passwort:&lt;/label&gt;
+    &lt;input type=&quot;password&quot; id=&quot;password&quot; class=&quot;basic-input&quot; placeholder=&quot;Passwort&quot;/&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-group&quot;&gt;
+    &lt;label for=&quot;textarea&quot; class=&quot;basic-label&quot;&gt;Textarea:&lt;/label&gt;
+    &lt;textarea name=&quot;textarea&quot; id=&quot;textarea&quot; class=&quot;basic-textarea&quot; placeholder=&quot;Textarea here&quot;&gt;&lt;/textarea&gt;
+&lt;/div&gt;</pre>
+                    </li>
+                  </ul>
+            
+              </section>
+             <section class="kss-depth-2">
+              <h3 class="kss-title"><span class="kss-ref">4.2</span> - Dropdown</h3>
+                  <div class="kss-box"></div>
+
+                  <ul class="bk-mod-list">
+                    <li class="bk-mod-list__item">
+                      <span class="bk-mod__name bk-mod__name--default">(default)</span>
+                      <div class="bk-mod__desc"></div>
+                      <div class="bk-mod__example">
+                        
+<div class="form-group">
+    <label for="select-choice" class="basic-label">Select Dropdown Choice:</label>
+    <select name="select-choice" id="select-choice" class="basic-input">
+        <option value="Choice 1">Choice 1</option>
+        <option value="Choice 2">Choice 2</option>
+        <option value="Choice 3">Choice 3</option>
+    </select>
+</div>
+                      </div>
+                    </li>
+                    <li class="bk-mod-list__item">
+                      <pre class="bk-mod__code prettyprint lang-html">
+&lt;div class=&quot;form-group&quot;&gt;
+    &lt;label for=&quot;select-choice&quot; class=&quot;basic-label&quot;&gt;Select Dropdown Choice:&lt;/label&gt;
+    &lt;select name=&quot;select-choice&quot; id=&quot;select-choice&quot; class=&quot;basic-input&quot;&gt;
+        &lt;option value=&quot;Choice 1&quot;&gt;Choice 1&lt;/option&gt;
+        &lt;option value=&quot;Choice 2&quot;&gt;Choice 2&lt;/option&gt;
+        &lt;option value=&quot;Choice 3&quot;&gt;Choice 3&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/div&gt;</pre>
+                    </li>
+                  </ul>
+            
+              </section>
+             <section class="kss-depth-2">
+              <h3 class="kss-title"><span class="kss-ref">4.3</span> - Checkboxen und Radios</h3>
+                  <div class="kss-box"></div>
+
+                  <ul class="bk-mod-list">
+                    <li class="bk-mod-list__item">
+                      <span class="bk-mod__name bk-mod__name--default">(default)</span>
+                      <div class="bk-mod__desc"></div>
+                      <div class="bk-mod__example">
+                        <div class="form-group">
+    <label class="checkradio__label">
+        <input type="radio" name="radio-choice-1" value="choice-1" class="checkradio__input" />
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+    </label>
+</div>
+<div class="form-group">
+    <label class="checkradio__label">
+        <input type="radio" name="radio-choice-1" value="choice-2" class="checkradio__input" />
+        Choice 2
+    </label>
+</div>
+<div class="form-group">
+    <label class="checkradio__label">
+        <input type="checkbox" name="check-choice-1" value="choice-1" class="checkradio__input" />
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+    </label>
+</div>
+<div class="form-group">
+    <label class="checkradio__label">
+        <input type="checkbox" name="check-choice-2" value="choice-2" class="checkradio__input" />
+        Choice 2
+    </label>
+</div>
+                      </div>
+                    </li>
+                    <li class="bk-mod-list__item">
+                      <pre class="bk-mod__code prettyprint lang-html">&lt;div class=&quot;form-group&quot;&gt;
+    &lt;label class=&quot;checkradio__label&quot;&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;radio-choice-1&quot; value=&quot;choice-1&quot; class=&quot;checkradio__input&quot; /&gt;
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+    &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-group&quot;&gt;
+    &lt;label class=&quot;checkradio__label&quot;&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;radio-choice-1&quot; value=&quot;choice-2&quot; class=&quot;checkradio__input&quot; /&gt;
+        Choice 2
+    &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-group&quot;&gt;
+    &lt;label class=&quot;checkradio__label&quot;&gt;
+        &lt;input type=&quot;checkbox&quot; name=&quot;check-choice-1&quot; value=&quot;choice-1&quot; class=&quot;checkradio__input&quot; /&gt;
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+    &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-group&quot;&gt;
+    &lt;label class=&quot;checkradio__label&quot;&gt;
+        &lt;input type=&quot;checkbox&quot; name=&quot;check-choice-2&quot; value=&quot;choice-2&quot; class=&quot;checkradio__input&quot; /&gt;
+        Choice 2
+    &lt;/label&gt;
+&lt;/div&gt;</pre>
+                    </li>
+                  </ul>
+            
+              </section>
+      </article>
+    </div>
+
+  </div>
+
+  <footer class="bk-style__footer">
+    Basekit Styleguide
+  </footer>
+  <!-- SCRIPTS -->
+  <script src="public/kss.js"></script>
+  <script src="public/prettify.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      var sidebarAdjust = function() {
+        // Match footer/body height
+        var height = Math.max($(window).height(), $('#kss-main').height());
+
+        if ($(window).width() <= 768) {
+          $('#kss-main, #kss-nav').height('auto');
+        } else {
+          $('#kss-main, #kss-nav').height(height);
+        }
+      };
+
+      $(window).resize(sidebarAdjust);
+      $(window).scroll(sidebarAdjust);
+      sidebarAdjust();
+
+      // Ensure code blocks are highlighted properly...
+      $('pre>code').addClass('prettyprint');
+      prettyPrint();
+
+    });
+  </script>
+
+</body>
+</html>
